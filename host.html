@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>DAEHO · Home Café & Bar</title>
+<meta name="description" content="Daeho Home Café & Bar — Menu 2026 · v.2" />
+<meta name="theme-color" content="#fafaf7" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+KR:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fafaf7;
+    --ink: #1a1815;
+    --ink-soft: #4a4640;
+    --ink-faint: #8a8478;
+    --rule: #d8d3c8;
+    --accent: #1a1815;
+    --serif: 'Cormorant Garamond', 'Noto Serif KR', serif;
+    --serif-kr: 'Noto Serif KR', 'Cormorant Garamond', serif;
+    --sans: 'Inter', 'Noto Serif KR', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif-kr);
+    font-weight: 300;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .wrap {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ===== HERO ===== */
+  header.hero {
+    text-align: center;
+    padding: 72px 24px 48px;
+  }
+
+  .hero-mark {
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: 0.5em;
+    font-size: 12px;
+    color: var(--ink);
+    margin-bottom: 32px;
+    padding-left: 0.5em;
+  }
+
+  .hero h1 {
+    font-family: var(--serif-kr);
+    font-weight: 400;
+    font-size: clamp(26px, 7vw, 34px);
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .hero .hero-en {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin-bottom: 36px;
+    letter-spacing: 0.02em;
+  }
+
+  .hero .volume {
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    font-size: 11px;
+    color: var(--ink);
+    padding-left: 0.4em;
+  }
+
+  /* ===== JUMP NAV ===== */
+  nav.jump {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250, 250, 247, 0.94);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-top: 16px;
+  }
+
+  nav.jump ul {
+    list-style: none;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 12px 24px;
+    gap: 22px;
+  }
+
+  nav.jump ul::-webkit-scrollbar { display: none; }
+
+  nav.jump a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 400;
+    transition: color 0.15s ease;
+  }
+
+  nav.jump a:hover,
+  nav.jump a:active {
+    color: var(--ink);
+  }
+
+  /* ===== SECTION ===== */
+  section.menu-section {
+    padding: 56px 0 24px;
+    scroll-margin-top: 56px;
+  }
+
+  .section-head {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: var(--ink);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .section-head h2 {
+    font-family: var(--serif-kr);
+    font-weight: 500;
+    font-size: clamp(22px, 6vw, 26px);
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .section-head .sub {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+
+  .section-head .dots {
+    font-family: var(--serif);
+    color: var(--ink-faint);
+    font-size: 14px;
+    letter-spacing: 0.4em;
+    padding-left: 0.4em;
+  }
+
+  /* ===== ITEM ===== */
+  .item {
+    padding: 18px 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .item:last-child { border-bottom: none; }
+
+  .item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .item-name {
+    font-family: var(--serif-kr);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .item-name .en {
+    display: inline;
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-left: 6px;
+    letter-spacing: 0.01em;
+  }
+
+  .item-tag {
+    flex-shrink: 0;
+    font-family: var(--sans);
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    color: var(--ink);
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 2px 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    align-self: flex-start;
+    margin-top: 4px;
+    white-space: nowrap;
+    padding-left: 8px;
+    padding-right: 4px;
+  }
+
+  .item-desc {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .item-pair,
+  .item-garnish {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--ink-faint);
+    letter-spacing: 0.01em;
+  }
+
+  .item-pair .label,
+  .item-garnish .label {
+    font-family: var(--sans);
+    color: var(--ink);
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    margin-right: 8px;
+    font-size: 9.5px;
+    text-transform: uppercase;
+  }
+
+  /* ===== COURSE ===== */
+  .course {
+    padding: 24px 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .course:last-child { border-bottom: none; }
+
+  .course-mark {
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: var(--ink);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .course h3 {
+    font-family: var(--serif-kr);
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: 0.01em;
+  }
+
+  .course-flow {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.8;
+    margin-bottom: 8px;
+    font-weight: 300;
+  }
+
+  .course-flow .arrow {
+    color: var(--ink-faint);
+    margin: 0 6px;
+    font-weight: 300;
+  }
+
+  .course-meta {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+  }
+
+  /* ===== GARNISH GUIDE ===== */
+  .garnish-row {
+    padding: 18px 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .garnish-row:last-child { border-bottom: none; }
+
+  .garnish-spirit {
+    font-family: var(--serif-kr);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .garnish-spirit .en {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-left: 8px;
+  }
+
+  .garnish-list {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+    font-weight: 300;
+  }
+
+  .garnish-note {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center;
+    padding: 72px 28px 56px;
+    border-top: 1px solid var(--rule);
+    margin-top: 32px;
+  }
+
+  .footer-amenity {
+    font-family: var(--serif-kr);
+    font-weight: 400;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+    line-height: 1.7;
+  }
+
+  .footer-amenity-en {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    margin-bottom: 36px;
+  }
+
+  .footer-signature {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 11px;
+    color: var(--ink);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+  }
+
+  .footer-signature .dot {
+    color: var(--ink-faint);
+    margin: 0 8px;
+  }
+
+  /* ===== Mobile tweaks ===== */
+  @media (max-width: 420px) {
+    .item-head { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .item-tag { margin-top: 2px; order: 2; }
+    .item-name { order: 1; }
+  }
+
+  /* ===== Clickable item ===== */
+  .item[data-recipe] {
+    cursor: pointer;
+    transition: background 0.15s ease;
+    border-radius: 2px;
+    position: relative;
+  }
+  .item[data-recipe]:hover,
+  .item[data-recipe]:focus {
+    background: rgba(26, 24, 21, 0.025);
+    outline: none;
+  }
+  .item[data-recipe]::after {
+    content: '＋';
+    position: absolute;
+    right: 0;
+    top: 18px;
+    font-family: var(--serif);
+    font-size: 14px;
+    color: var(--ink-faint);
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    font-weight: 300;
+  }
+  .item[data-recipe]:hover::after,
+  .item[data-recipe]:focus::after {
+    opacity: 0.6;
+  }
+
+  /* ===== Modal ===== */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 24, 21, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 100;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 40px 16px;
+  }
+  .modal-backdrop.open { display: flex; animation: fadeIn 0.18s ease; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal {
+    background: var(--paper);
+    max-width: 640px;
+    width: 100%;
+    padding: 36px 32px 40px;
+    position: relative;
+    border: 1px solid var(--rule);
+    box-shadow: 0 20px 60px rgba(26, 24, 21, 0.18);
+    margin: auto;
+    animation: slideUp 0.22s ease;
+  }
+  @keyframes slideUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  .modal-close {
+    position: absolute; top: 14px; right: 14px;
+    background: none; border: none;
+    width: 36px; height: 36px;
+    font-size: 22px; color: var(--ink-soft);
+    cursor: pointer; font-family: var(--serif);
+    line-height: 1; padding: 0;
+    border-radius: 50%;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .modal-close:hover { background: rgba(26, 24, 21, 0.06); color: var(--ink); }
+  .modal-no {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: 12px; color: var(--ink-faint);
+    letter-spacing: 0.3em; margin-bottom: 14px;
+  }
+  .modal-title {
+    font-family: var(--serif-kr); font-weight: 500;
+    font-size: 22px; color: var(--ink);
+    margin-bottom: 4px; letter-spacing: 0.01em; line-height: 1.3;
+  }
+  .modal-title-en {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: 15px; color: var(--ink-soft);
+    margin-bottom: 22px; letter-spacing: 0.02em;
+  }
+  .modal-meta {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px;
+    padding: 14px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 24px;
+  }
+  .modal-meta-cell { text-align: center; }
+  .modal-meta-cell .label {
+    font-family: var(--sans); font-size: 9px;
+    letter-spacing: 0.25em; color: var(--ink-faint);
+    text-transform: uppercase; margin-bottom: 4px; font-weight: 500;
+  }
+  .modal-meta-cell .value {
+    font-family: var(--serif-kr); font-size: 12px;
+    color: var(--ink); line-height: 1.4;
+  }
+  .modal-section { margin-bottom: 22px; }
+  .modal-section:last-child { margin-bottom: 0; }
+  .modal-section-title {
+    font-family: var(--sans); font-size: 10px;
+    letter-spacing: 0.4em; color: var(--ink);
+    margin-bottom: 12px; text-transform: uppercase; font-weight: 500;
+    padding-bottom: 6px; border-bottom: 1px dotted var(--rule);
+  }
+  .modal-section-title .ko {
+    font-family: var(--serif-kr); color: var(--ink-soft);
+    font-weight: 400; margin-left: 8px;
+    letter-spacing: 0.05em; font-size: 11px; text-transform: none;
+  }
+  .modal-ingredients { list-style: none; padding: 0; margin: 0; }
+  .modal-ingredients li {
+    font-family: var(--serif-kr); font-size: 13.5px;
+    color: var(--ink-soft); padding: 5px 0;
+    line-height: 1.6;
+    display: flex; justify-content: space-between; gap: 12px;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .modal-ingredients li:last-child { border-bottom: none; }
+  .modal-ingredients li .name { flex: 1; color: var(--ink); }
+  .modal-ingredients li .qty {
+    font-family: var(--serif); font-style: italic;
+    color: var(--ink-faint); text-align: right; flex-shrink: 0; font-size: 12.5px;
+  }
+  .modal-ingredients li.note {
+    font-style: italic; color: var(--ink-faint);
+    border-bottom: none; padding-top: 8px; display: block;
+    font-size: 12px; line-height: 1.6;
+  }
+  .modal-method {
+    list-style: none; padding: 0; margin: 0; counter-reset: step;
+  }
+  .modal-method li {
+    font-family: var(--serif-kr); font-size: 13.5px;
+    color: var(--ink-soft); padding: 8px 0 8px 32px;
+    line-height: 1.7; position: relative; counter-increment: step;
+  }
+  .modal-method li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: 10px;
+    width: 22px; height: 22px;
+    background: var(--ink); color: var(--paper);
+    font-family: var(--serif); font-size: 11px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 400;
+  }
+  .modal-method li .duration {
+    font-family: var(--serif); font-style: italic;
+    color: var(--ink-faint); font-size: 12px; margin-left: 6px;
+  }
+  .modal-plating {
+    font-family: var(--serif-kr); font-size: 13px;
+    color: var(--ink-soft); line-height: 1.8;
+  }
+  .modal-plating .row {
+    display: flex; justify-content: space-between; gap: 12px; padding: 4px 0;
+  }
+  .modal-plating .row .label-k {
+    color: var(--ink); font-weight: 500; min-width: 60px;
+  }
+  .modal-text {
+    font-family: var(--serif-kr); font-size: 13.5px;
+    color: var(--ink-soft); line-height: 1.8; font-weight: 300;
+  }
+  .modal-pairing { list-style: none; padding: 0; margin: 0; }
+  .modal-pairing li {
+    font-family: var(--serif-kr); font-size: 13px;
+    color: var(--ink-soft); padding: 5px 0 5px 14px;
+    position: relative; line-height: 1.6;
+  }
+  .modal-pairing li::before {
+    content: '·'; position: absolute; left: 0; color: var(--ink-faint);
+  }
+  .modal-hosttip {
+    background: rgba(26, 24, 21, 0.035); padding: 14px 16px;
+    border-left: 2px solid var(--ink);
+    font-family: var(--serif-kr); font-size: 12.5px;
+    color: var(--ink-soft); line-height: 1.75; font-style: italic;
+  }
+  @media (max-width: 480px) {
+    .modal { padding: 32px 22px 32px; }
+    .modal-meta-cell .label { font-size: 8px; letter-spacing: 0.18em; }
+    .modal-meta-cell .value { font-size: 11px; }
+    .modal-title { font-size: 19px; }
+  }
+  body.modal-open { overflow: hidden; }
+
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-mark">D · A · E · H · O</div>
+  <h1>대호 홈카페 &amp; 바</h1>
+  <div class="hero-en">Daeho Home Café &amp; Bar</div>
+  <div class="volume">M E N U · 2 0 2 6 · V . 2</div>
+</header>
+
+<nav class="jump">
+  <ul>
+    <li><a href="#welcome">Welcome</a></li>
+    <li><a href="#cold">Cold Board</a></li>
+    <li><a href="#warm">Signature Warm</a></li>
+    <li><a href="#sweet">Sweet</a></li>
+    <li><a href="#bar">Bar · Spirits</a></li>
+    <li><a href="#cocktail">Cocktail</a></li>
+    <li><a href="#mocktail">Mocktail</a></li>
+    <li><a href="#coffee">Coffee</a></li>
+    <li><a href="#garnish">Garnish Guide</a></li>
+    <li><a href="#courses">Courses</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ WELCOME ============ -->
+<section id="welcome" class="menu-section">
+  <div class="section-head">
+    <div class="section-eyebrow">Welcome</div>
+    <h2>웰컴</h2>
+    <div class="sub">To Start The Evening</div>
+    <div class="dots">· · ·</div>
+  </div>
+
+  <div class="item" data-recipe="1" tabindex="0" role="button"><div class="item-head"><div class="item-name">시트러스 스파클러<span class="en">Citrus Sparkler</span></div>
+      <span class="item-tag">Non · Alc</span>
+    </div>
+    <div class="item-desc">산펠레그리노 · 레몬 · 라임</div>
+    <div class="item-garnish"><span class="label">Garnish</span>스피아민트 한 가지 · 레몬 휠</div>
+  </div>
+
+  <div class="item" data-recipe="2" tabindex="0" role="button"><div class="item-head"><div class="item-name">모엣 미니 플루트<span class="en">Moët Mini Flute</span></div>
+      <span class="item-tag">Sparkling</span>
+    </div>
+    <div class="item-desc">모엣 임페리얼 200mL · Riedel 샴페인 잔</div>
+    <div class="item-garnish"><span class="label">Garnish</span>딸기 1개 또는 라즈베리</div>
+  </div>
+
+  <div class="item" data-recipe="3" tabindex="0" role="button"><div class="item-head"><div class="item-name">진저 위스키 하이볼<span class="en">Ginger Whisky Highball</span></div>
+      <span class="item-tag">Signature</span>
+    </div>
+    <div class="item-desc">발베니 14년 · 분다버그 진저비어</div>
+    <div class="item-garnish"><span class="label">Garnish</span>레몬 휠 · 라임 휠 · 민트 슬랩</div>
+  </div>
+
+  <div class="item" data-recipe="4" tabindex="0" role="button"><div class="item-head"><div class="item-name">이탈리안 소다<span class="en">Italian Soda</span></div>
+      <span class="item-tag">Non · Alc</span>
+    </div>
+    <div class="item-desc">폴라라 시칠리아 · 블러드오렌지 또는 레몬</div>
+    <div class="item-garnish"><span class="label">Garnish</span>오렌지 휠 또는 레몬 휠</div>
+  </div>
+</section>
+
+<!-- ============ COLD BOARD ============ -->
+<section id="cold" class="menu-section">
+  <div class="section-head">
+    <div class="section-eyebrow">Cold Board</div>
+    <h2>콜드 보드</h2>
+    <div class="sub">Antipasti &amp; Cold Bites</div>
+    <div class="dots">· · ·</div>
+  </div>
+
+  <div class="item" data-recipe="5" tabindex="0" role="button"><div class="item-head"><div class="item-name">프로슈토 부라타<span class="en">Prosciutto &amp; Burrata</span></div>
+    </div>
+    <div class="item-desc">부라타 · 시테리오 프로슈토 · 와일드 루꼴라 · 칼라마타 올리브 · 방울토마토 · 아카시아 꿀</div>
+    <div class="item-pair"><span class="label">Pair</span>모엣 미니 · 화이트 와인</div>
+  </div>
+
+  <div class="item" data-recipe="6" tabindex="0" role="button"><div class="item-head"><div class="item-name">하몬 파르미지아노 보드<span class="en">Jamón &amp; Parmigiano Board</span></div>
+    </div>
+    <div class="item-desc">하몬 이베리코 · 파르미지아노 · 시테리오 살라미 · 마카다미아 · 호두 · Lindt 90%/85%</div>
+    <div class="item-pair"><span class="label">Pair</span>발베니 14년 니트 · 레드 와인</div>
+  </div>
+
+  <div class="item" data-recipe="7" tabindex="0" role="button"><div class="item-head"><div class="item-name">카프레제 꼬치<span class="en">Caprese Skewer</span></div>
+    </div>
+    <div class="item-desc">방울토마토 · 미니 모차렐라 · 바질 · 발사믹</div>
+    <div class="item-pair"><span class="label">Pair</span>샴페인 · 하이볼</div>
+  </div>
+
+  <div class="item" data-recipe="8" tabindex="0" role="button"><div class="item-head"><div class="item-name">프로슈토 청포도 꼬치<span class="en">Prosciutto &amp; Grape Skewer</span></div>
+    </div>
+    <div class="item-desc">청포도 큐브 · 프로슈토 · 민트</div>
+    <div class="item-pair"><span class="label">Pair</span>샴페인 · 화이트 와인</div>
+  </div>
+
+  <div class="item" data-recipe="9" tabindex="0" role="button"><div class="item-head"><div class="item-name">한식 안주 보드<span class="en">Korean Bar Board</span></div>
+    </div>
+    <div class="item-desc">곰곰 먹태채 · 잭링크스 저키 · 마루에스 크리스피 오징어 · 마요네즈 · 타바스코</div>
+    <div class="item-pair"><span class="label">Pair</span>Asahi · 하이볼 · 소주</div>
+  </div>
+
+  <div class="item" data-recipe="10" tabindex="0" role="button"><div class="item-head"><div class="item-name">크래커 셀렉션<span class="en">Cracker Selection</span></div>
+    </div>
+    <div class="item-desc">카스 테이블워터 크래커 · 꿀 · 치즈 동반</div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE WARM ============ -->
+<section id="warm" class="menu-section">
+  <div class="section-head">
+    <div class="section-eyebrow">Signature · Torch &amp; Warm</div>
+    <h2>시그니처 · 토치 &amp; 워밍</h2>
+    <div class="sub">Torch &amp; Hot Bites</div>
+    <div class="dots">· · ·</div>
+  </div>
+
+  <div class="item" data-recipe="11" tabindex="0" role="button"><div class="item-head"><div class="item-name">관자 아부리 명란마요<span class="en">Scallop Aburi · Mentai Mayo</span></div>
+      <span class="item-tag">Torch</span>
+    </div>
+    <div class="item-desc">관자 · 명란마요 · 토치 카라멜라이즈 · 쪽파</div>
+    <div class="item-pair"><span class="label">Pair</span>발베니 14년 · 사케 · 하이볼</div>
+  </div>
+
+  <div class="item" data-recipe="12" tabindex="0" role="button"><div class="item-head"><div class="item-name">카망베르 통토치<span class="en">Camembert Aburi</span></div>
+      <span class="item-tag">Torch</span>
+    </div>
+    <div class="item-desc">카망베르 휠 · 아카시아 꿀 · 호두 · 타임</div>
+    <div class="item-pair"><span class="label">Pair</span>Glenmorangie Signet · 화이트 와인</div>
+  </div>
+
+  <div class="item" data-recipe="13" tabindex="0" role="button"><div class="item-head"><div class="item-name">모듬 야키토리<span class="en">Mixed Yakitori</span></div>
+      <span class="item-tag">Torch</span>
+    </div>
+    <div class="item-desc">8종 모듬 꼬치 · 데리야끼 · 토치 마무리 · 쪽파</div>
+    <div class="item-pair"><span class="label">Pair</span>하이볼 · Asahi · 사케</div>
+  </div>
+
+  <div class="item" data-recipe="14" tabindex="0" role="button"><div class="item-head"><div class="item-name">파닭 꼬치<span class="en">Padak Skewer</span></div>
+      <span class="item-tag">Torch</span>
+    </div>
+    <div class="item-desc">국내산 닭 12개 꼬치 · 숯불 데리야끼 · 토치 카라멜라이즈 · 쪽파</div>
+    <div class="item-pair"><span class="label">Pair</span>Asahi · 하이볼 · 소주</div>
+  </div>
+
+  <div class="item" data-recipe="15" tabindex="0" role="button"><div class="item-head"><div class="item-name">연어 타다키<span class="en">Salmon Tataki</span></div>
+      <span class="item-tag">Torch · 호출</span>
+    </div>
+    <div class="item-desc">연어 사시미 · 표면 토치 · 폰즈 · 무즙</div>
+    <div class="item-pair"><span class="label">Pair</span>사케 · 진토닉 · 화이트 와인</div>
+  </div>
+</section>
+
+<!-- ============ SWEET ============ -->
+<section id="sweet" class="menu-section">
+  <div class="section-head">
+    <div class="section-eyebrow">Sweet</div>
+    <h2>디저트</h2>
+    <div class="sub">To Finish</div>
+    <div class="dots">· · ·</div>
+  </div>
+
+  <div class="item" data-recipe="16" tabindex="0" role="button"><div class="item-head"><div class="item-name">토치 마시멜로 하트 꼬치<span class="en">Marshmallow Heart Skewer</span></div>
+      <span class="item-tag">Signature</span>
+    </div>
+    <div class="item-desc">마시멜로 · 바나나 · 피스타치오 스프레드 · 딸기 · Lindt 다크 가루</div>
+    <div class="item-pair"><span class="label">Pair</span>Glenmorangie Signet · 에스프레소</div>
+  </div>
+
+  <div class="item" data-recipe="17" tabindex="0" role="button"><div class="item-head"><div class="item-name">초콜릿 너트 플레이트<span class="en">Chocolate &amp; Nut Plate</span></div>
+    </div>
+    <div class="item-desc">Lindt 90% · 85% · 마카다미아 · 호두</div>
+    <div class="item-pair"><span class="label">Pair</span>발베니 14년 · 에스프레소</div>
+  </div>
+
+  <div class="item" data-recipe="18" tabindex="0" role="button"><div class="item-head"><div class="item-name">계절 과일 트레이<span class="en">Seasonal Fruit Tray</span></div>
+    </div>
+    <div class="item-desc">설향 딸기 · 청포도 · 스위티오 바나나 · 방울토마토</div>
+    <div class="item-pair"><span class="label">Pair</span>샴페인 · 라떼</div>
+  </div>
+
+  <div class="item" data-recipe="19" tabindex="0" role="button"><div class="item-head"><div class="item-name">스모어 미니<span class="en">S'mores Miniature</span></div>
+      <span class="item-tag">Torch</span>
+    </div>
+    <div class="item-desc">크래커 · 토치 마시멜로 · Lindt 90%</div>
+    <div class="item-pair"><span class="label">Pair</span>에스프레소 · 위스키</div>
+  </div>
+</section>
+
+<!-- ============ BAR ============ -->
+<section id="bar" class="menu-section">
+  <div class="section-head">
+    <div class="section-eyebrow">Bar · Spirits</div>
+    <h2>바 · 위스키 &amp; 맥주</h2>
+    <div class="sub">Whisky · Beer · Soju</div>
+    <div class="dots">· · ·</div>
+  </div>
+
+  <div class="item" data-recipe="20" tabindex="0" role="button"><div class="item-head"><div class="item-name">발베니 14년 니트<span class="en">Balvenie 14 · Neat</span></div>
+      <span class="item-tag">Daily</span>
+    </div>
+    <div class="item-desc">프렌치오크 · 바닐라 · 꿀 노트 · Glencairn 잔</div>
+    <div class="item-garnish"><span class="label">Garnish</span>없음 · 산펠레그리노 체이서</div>
+  </div>
+
+  <div class="item" data-recipe="21" tabindex="0" role="button"><div class="item-head"><div class="item-name">발베니 온더락<span class="en">Balvenie · On The Rocks</span></div>
+    </div>
+    <div class="item-desc">발베니 14년 · 아이스올리 빅볼 · Riedel 락 글라스</div>
+    <div class="item-garnish"><span class="label">Garnish</span>오렌지 껍질 트위스트 (토치로 향 입히기)</div>
+  </div>
+
+  <div class="item" data-recipe="22" tabindex="0" role="button"><div class="item-head"><div class="item-name">글렌모렌지 시그넷<span class="en">Glenmorangie Signet</span></div>
+      <span class="item-tag">Dessert</span>
+    </div>
+    <div class="item-desc">초콜릿 · 로스티드 노트 · 디저트 페어링 전용</div>
+    <div class="item-garnish"><span class="label">Garnish</span>없음 (디저트 동반)</div>
+  </div>
+
+  <div class="item" data-recipe="23" tabindex="0" role="button"><div class="item-head"><div class="item-name">진저 하이볼<span class="en">Ginger Highball</span></div>
+    </div>
+    <div class="item-desc">발베니 · 분다버그 진저비어</div>
+    <div class="item-garnish"><span class="label">Garnish</span>레몬 휠 · 라임 휠</div>
+  </div>
+
+  <div class="item" data-recipe="24" tabindex="0" role="button"><div class="item-head"><div class="item-name">Asahi 슈퍼 드라이<span class="en">Asahi Super Dry</span></div>
+    </div>
+    <div class="item-desc">인블룸 맥주잔 555mL 서빙</div>
+    <div class="item-garnish"><span class="label">Garnish</span>없음</div>
+  </div>
+
+  <div class="item" data-recipe="25" tabindex="0" role="button"><div class="item-head"><div class="item-name">참이슬 fresh<span class="en">Chamisul Fresh</span></div>
+    </div>
+    <div class="item-desc">이플스토리 도자기 소주잔 서빙</div>
+    <div class="item-garnish"><span class="label">Garnish</span>없음 · 신선 식재 동반</div>
+  </div>
+</section>
+
+<!-- ============ COCKTAIL ============ -->
+<section id="cocktail" class="menu-section">
+  <div class="section-head">
+    <div class="section-eyebrow">Cocktail</div>
+    <h2>칵테일</h2>
+    <div class="sub">Classic &amp; Signature Cocktails</div>
+    <div class="dots">· · ·</div>
+  </div>
+
+  <div class="item" data-recipe="26" tabindex="0" role="button"><div class="item-head"><div class="item-name">올드 패션드<span class="en">Old Fashioned</span></div>
+      <span class="item-tag">Whisky</span>
+    </div>
+    <div class="item-desc">발베니 14년 · 설탕 · 비터스 (예정) · Riedel 락</div>
+    <div class="item-garnish"><span class="label">Garnish</span>오렌지 껍질 트위스트 (토치) · 마라스키노 체리</div>
+  </div>
+
+  <div class="item" data-recipe="27" tabindex="0" role="button"><div class="item-head"><div class="item-name">위스키 사워<span class="en">Whisky Sour</span></div>
+      <span class="item-tag">Whisky</span>
+    </div>
+    <div class="item-desc">발베니 · 레몬즙 · 설탕시럽 · Yukiwa 셰이커</div>
+    <div class="item-garnish"><span class="label">Garnish</span>레몬 휠 · 체리</div>
+  </div>
+
+  <div class="item" data-recipe="28" tabindex="0" role="button"><div class="item-head"><div class="item-name">에스프레소 마티니<span class="en">Espresso Martini</span></div>
+      <span class="item-tag">Vodka · 예정</span>
+    </div>
+    <div class="item-desc">그레이구스 · Kahlúa · 에스프레소 더블샷 · Riedel 쿠페</div>
+    <div class="item-garnish"><span class="label">Garnish</span>커피 원두 3알 (수면 위)</div>
+  </div>
+
+  <div class="item" data-recipe="29" tabindex="0" role="button"><div class="item-head"><div class="item-name">화이트 러시안<span class="en">White Russian</span></div>
+      <span class="item-tag">Vodka · 예정</span>
+    </div>
+    <div class="item-desc">그레이구스 · Kahlúa · Oatly 크림 레이어 · Riedel 락</div>
+    <div class="item-garnish"><span class="label">Garnish</span>커피 가루 · 다크초콜릿 가루</div>
+  </div>
+
+  <div class="item" data-recipe="30" tabindex="0" role="button"><div class="item-head"><div class="item-name">진토닉<span class="en">Gin &amp; Tonic</span></div>
+      <span class="item-tag">Gin · 예정</span>
+    </div>
+    <div class="item-desc">진 · 피버트리 토닉 · Nachtmann 하이볼</div>
+    <div class="item-garnish"><span class="label">Garnish</span>라임 휠 · 로즈마리 또는 민트</div>
+  </div>
+
+  <div class="item" data-recipe="31" tabindex="0" role="button"><div class="item-head"><div class="item-name">김렛<span class="en">Gimlet</span></div>
+      <span class="item-tag">Gin · 예정</span>
+    </div>
+    <div class="item-desc">진 · 라임즙 · 설탕시럽 · Riedel 쿠페</div>
+    <div class="item-garnish"><span class="label">Garnish</span>라임 휠</div>
+  </div>
+
+  <div class="item" data-recipe="32" tabindex="0" role="button"><div class="item-head"><div class="item-name">모스코 뮬<span class="en">Moscow Mule</span></div>
+      <span class="item-tag">Vodka · 예정</span>
+    </div>
+    <div class="item-desc">그레이구스 · 분다버그 진저비어 · 라임즙 · 구리잔</div>
+    <div class="item-garnish"><span class="label">Garnish</span>라임 휠 · 민트 슬랩</div>
+  </div>
+
+  <div class="item" data-recipe="33" tabindex="0" role="button"><div class="item-head"><div class="item-name">블러디 메리<span class="en">Bloody Mary</span></div>
+      <span class="item-tag">Vodka · 예정</span>
+    </div>
+    <div class="item-desc">그레이구스 · 토마토 주스 · 우스터 · 타바스코 · 후추</div>
+    <div class="item-garnish"><span class="label">Garnish</span>셀러리 스틱 · 레몬 휠</div>
+  </div>
+</section>
+
+<!-- ============ MOCKTAIL ============ -->
+<section id="mocktail" class="menu-section">
+  <div class="section-head">
+    <div class="section-eyebrow">Mocktail</div>
+    <h2>목테일</h2>
+    <div class="sub">Non-Alcoholic Cocktails</div>
+    <div class="dots">· · ·</div>
+  </div>
+
+  <div class="item" data-recipe="34" tabindex="0" role="button"><div class="item-head"><div class="item-name">시드립 토닉<span class="en">Seedlip &amp; Tonic</span></div>
+      <span class="item-tag">Non · Alc</span>
+    </div>
+    <div class="item-desc">Seedlip Spice 94 · 피버트리 토닉</div>
+    <div class="item-garnish"><span class="label">Garnish</span>라임 휠 · 로즈마리 또는 민트</div>
+  </div>
+
+  <div class="item" data-recipe="35" tabindex="0" role="button"><div class="item-head"><div class="item-name">버진 진저 뮬<span class="en">Virgin Ginger Mule</span></div>
+      <span class="item-tag">Non · Alc</span>
+    </div>
+    <div class="item-desc">시드립 · 분다버그 진저비어 · 라임즙 · Nachtmann 하이볼</div>
+    <div class="item-garnish"><span class="label">Garnish</span>라임 휠 · 민트 슬랩</div>
+  </div>
+
+  <div class="item" data-recipe="36" tabindex="0" role="button"><div class="item-head"><div class="item-name">버진 블러디<span class="en">Virgin Bloody</span></div>
+      <span class="item-tag">Non · Alc</span>
+    </div>
+    <div class="item-desc">토마토 주스 · 우스터 · 타바스코 · 레몬즙</div>
+    <div class="item-garnish"><span class="label">Garnish</span>셀러리 스틱 · 레몬 휠</div>
+  </div>
+
+  <div class="item" data-recipe="37" tabindex="0" role="button"><div class="item-head"><div class="item-name">진저 시트러스<span class="en">Ginger Citrus</span></div>
+      <span class="item-tag">Non · Alc</span>
+    </div>
+    <div class="item-desc">분다버그 진저비어 · 레몬즙 · 라임즙</div>
+    <div class="item-garnish"><span class="label">Garnish</span>레몬 휠 · 라임 휠 · 민트</div>
+  </div>
+
+  <div class="item" data-recipe="38" tabindex="0" role="button"><div class="item-head"><div class="item-name">레모네이드 스파클<span class="en">Sparkling Lemonade</span></div>
+      <span class="item-tag">Non · Alc</span>
+    </div>
+    <div class="item-desc">레몬즙 · 꿀 · 산펠레그리노 · 얼음</div>
+    <div class="item-garnish"><span class="label">Garnish</span>레몬 휠 · 민트 슬랩</div>
+  </div>
+
+  <div class="item" data-recipe="39" tabindex="0" role="button"><div class="item-head"><div class="item-name">버진 모히토<span class="en">Virgin Mojito</span></div>
+      <span class="item-tag">Non · Alc</span>
+    </div>
+    <div class="item-desc">민트 머들 · 라임 · 설탕 · 산펠레그리노 · 얼음</div>
+    <div class="item-garnish"><span class="label">Garnish</span>민트 가지 · 라임 휠</div>
+  </div>
+</section>
+
+<!-- ============ COFFEE ============ -->
+<section id="coffee" class="menu-section">
+  <div class="section-head">
+    <div class="section-eyebrow">Coffee</div>
+    <h2>커피</h2>
+    <div class="sub">From The Espresso Bar</div>
+    <div class="dots">· · ·</div>
+  </div>
+
+  <div class="item" data-recipe="40" tabindex="0" role="button"><div class="item-head"><div class="item-name">정성 에스프레소<span class="en">Hand-Crafted Espresso</span></div>
+      <span class="item-tag">Session</span>
+    </div>
+    <div class="item-desc">스타벅스 에스프레소 로스트 18g · 유레카 분쇄 · 딜리코 추출 · 호레카 샷잔</div>
+  </div>
+
+  <div class="item" data-recipe="41" tabindex="0" role="button"><div class="item-head"><div class="item-name">오트 라떼<span class="en">Oat Latte</span></div>
+      <span class="item-tag">Session</span>
+    </div>
+    <div class="item-desc">정성 에스프레소 · Oatly Barista 스팀 · 라떼아트</div>
+  </div>
+
+  <div class="item" data-recipe="42" tabindex="0" role="button"><div class="item-head"><div class="item-name">아포가토<span class="en">Affogato</span></div>
+      <span class="item-tag">Sweet</span>
+    </div>
+    <div class="item-desc">정성 에스프레소 · 바닐라 아이스크림 · 피스타치오 스프레드 토핑</div>
+  </div>
+
+  <div class="item" data-recipe="43" tabindex="0" role="button"><div class="item-head"><div class="item-name">네스프레소 아메리카노<span class="en">Nespresso Americano</span></div>
+      <span class="item-tag">Daily</span>
+    </div>
+    <div class="item-desc">버츄오 캡슐 · 머그 6종 셀렉션</div>
+  </div>
+
+  <div class="item" data-recipe="44" tabindex="0" role="button"><div class="item-head"><div class="item-name">루왁 세션<span class="en">Kopi Luwak Session</span></div>
+      <span class="item-tag">Special</span>
+    </div>
+    <div class="item-desc">루왁 홀빈 · 핸드드립 또는 사이폰 · 특별한 날만</div>
+  </div>
+
+  <div class="item" data-recipe="45" tabindex="0" role="button"><div class="item-head"><div class="item-name">카페 코레토<span class="en">Caffè Corretto</span></div>
+      <span class="item-tag">Alc</span>
+    </div>
+    <div class="item-desc">정성 에스프레소 · 발베니 한 방울 · 식후 음료</div>
+  </div>
+</section>
+
+<!-- ============ GARNISH ============ -->
+<section id="garnish" class="menu-section">
+  <div class="section-head">
+    <div class="section-eyebrow">Garnish Guide</div>
+    <h2>가니시 가이드</h2>
+    <div class="sub">By Spirit · Quick Reference</div>
+    <div class="dots">· · ·</div>
+  </div>
+
+  <div class="garnish-row">
+    <div class="garnish-spirit">위스키<span class="en">Whisky</span></div>
+    <div class="garnish-list">오렌지 껍질 트위스트 (토치 향 입히기) · 마라스키노 체리 · 산펠레그리노 체이서</div>
+    <div class="garnish-note">니트는 보통 가니시 없음. 칵테일에서만 가니시 사용.</div>
+  </div>
+
+  <div class="garnish-row">
+    <div class="garnish-spirit">진<span class="en">Gin</span></div>
+    <div class="garnish-list">라임 휠 · 로즈마리 가지 · 민트 슬랩 · 오이 슬라이스 · 자몽 껍질</div>
+    <div class="garnish-note">진의 보태니컬 향과 어울리는 허브·시트러스 중심.</div>
+  </div>
+
+  <div class="garnish-row">
+    <div class="garnish-spirit">보드카<span class="en">Vodka</span></div>
+    <div class="garnish-list">레몬 휠 · 라임 휠 · 올리브 · 셀러리 스틱 · 커피 원두 (마티니) · 후추</div>
+    <div class="garnish-note">보드카는 중립적이라 칵테일 종류에 따라 가니시가 결정됨.</div>
+  </div>
+
+  <div class="garnish-row">
+    <div class="garnish-spirit">샴페인<span class="en">Champagne</span></div>
+    <div class="garnish-list">딸기 · 라즈베리 · 민트 가지 · 레몬 껍질 트위스트</div>
+    <div class="garnish-note">잔 바닥에 베리 1개가 정통. 키르 로얄 변주 가능.</div>
+  </div>
+
+  <div class="garnish-row">
+    <div class="garnish-spirit">맥주<span class="en">Beer</span></div>
+    <div class="garnish-list">없음 · 라임 쐐기 (멕시칸 라거 한정)</div>
+    <div class="garnish-note">Asahi는 그냥. 잔에 따를 때 거품 1cm 유지.</div>
+  </div>
+
+  <div class="garnish-row">
+    <div class="garnish-spirit">소주<span class="en">Soju</span></div>
+    <div class="garnish-list">없음 · 신선 식재 동반 (먹태 · 저키 · 오징어)</div>
+    <div class="garnish-note">소주는 가니시 없는 게 정직함. 안주가 가니시 역할.</div>
+  </div>
+
+  <div class="garnish-row">
+    <div class="garnish-spirit">목테일<span class="en">Mocktail</span></div>
+    <div class="garnish-list">레몬 · 라임 · 민트 · 스피아민트 가지 · 셀러리 · 베리류 (계절)</div>
+    <div class="garnish-note">알콜이 없는 만큼 가니시가 음료의 80%를 만든다. 풍성하게.</div>
+  </div>
+
+  <div class="garnish-row">
+    <div class="garnish-spirit">에스프레소<span class="en">Espresso</span></div>
+    <div class="garnish-list">커피 원두 3알 (마티니) · 다크초콜릿 가루 · 피스타치오 스프레드 (아포가토)</div>
+    <div class="garnish-note">에스프레소 단독은 가니시 없음. 칵테일 · 디저트로 갈 때 가니시.</div>
+  </div>
+</section>
+
+<!-- ============ COURSES ============ -->
+<section id="courses" class="menu-section">
+  <div class="section-head">
+    <div class="section-eyebrow">Courses</div>
+    <h2>호스트 추천 코스</h2>
+    <div class="sub">Curated by The Host</div>
+    <div class="dots">· · ·</div>
+  </div>
+
+  <div class="course">
+    <div class="course-mark">Course A</div>
+    <h3>카페바 톤</h3>
+    <div class="course-flow">
+      시트러스 스파클러<span class="arrow">→</span>프로슈토 부라타 + 모엣 미니<span class="arrow">→</span>정성 라떼 + 초콜릿 너트 플레이트
+    </div>
+    <div class="course-meta">90~120분 · 첫 방문 추천</div>
+  </div>
+
+  <div class="course">
+    <div class="course-mark">Course B</div>
+    <h3>위스키 바 톤</h3>
+    <div class="course-flow">
+      진저 위스키 하이볼<span class="arrow">→</span>하몬 파르미지아노 보드 + 발베니 니트<span class="arrow">→</span>토치 마시멜로 하트 꼬치 + Glenmorangie Signet
+    </div>
+    <div class="course-meta">150~210분 · 친밀한 관계</div>
+  </div>
+
+  <div class="course">
+    <div class="course-mark">Course C</div>
+    <h3>이자카야 톤</h3>
+    <div class="course-flow">
+      모엣 미니<span class="arrow">→</span>관자 아부리 명란마요 + 모듬 야키토리<span class="arrow">→</span>파닭 꼬치 또는 연어 타다키<span class="arrow">→</span>카페 코레토
+    </div>
+    <div class="course-meta">120~150분 · 하이볼 메인</div>
+  </div>
+
+  <div class="course">
+    <div class="course-mark">Course D</div>
+    <h3>라이트 모드</h3>
+    <div class="course-flow">
+      시드립 토닉 또는 진저 하이볼<span class="arrow">→</span>카프레제 꼬치 또는 한식 안주 보드<span class="arrow">→</span>계절 과일 트레이
+    </div>
+    <div class="course-meta">60분 · 가볍게</div>
+  </div>
+
+  <div class="course">
+    <div class="course-mark">Course E</div>
+    <h3>모닝 애프터</h3>
+    <div class="course-flow">
+      정성 라떼 또는 네스프레소 아메리카노<span class="arrow">→</span>계절 과일 트레이
+    </div>
+    <div class="course-meta">30분 · 자고 일어난 다음 날 아침</div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="footer-amenity">본 객실 어메니티는 모두 호스트가 제공합니다.</div>
+  <div class="footer-amenity-en">All items are complimentary, offered by the host.</div>
+  <div class="footer-signature">대 호 홈 카 페 &amp; 바<span class="dot">·</span>역 삼<span class="dot">·</span>M M X X V I<span class="dot">·</span>V . 2</div>
+</footer>
+
+<!-- ============ RECIPE MODAL ============ -->
+<div class="modal-backdrop" id="recipeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal" role="document">
+    <button class="modal-close" aria-label="Close" onclick="closeRecipe()">&times;</button>
+    <div class="modal-no" id="modalNo">N O. 00</div>
+    <div class="modal-title" id="modalTitle">제목</div>
+    <div class="modal-title-en" id="modalTitleEn">Title</div>
+    <div class="modal-meta" id="modalMeta"></div>
+    <div class="modal-section">
+      <div class="modal-section-title">Ingredients<span class="ko">재료</span></div>
+      <ul class="modal-ingredients" id="modalIngredients"></ul>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Method<span class="ko">조리 방법</span></div>
+      <ol class="modal-method" id="modalMethod"></ol>
+    </div>
+    <div class="modal-section" id="platingSection">
+      <div class="modal-section-title">Plating<span class="ko">플레이팅</span></div>
+      <div class="modal-plating" id="modalPlating"></div>
+    </div>
+    <div class="modal-section" id="hostTipSection">
+      <div class="modal-section-title">Host&#39;s Tip<span class="ko">호스트 팁</span></div>
+      <div class="modal-hosttip" id="modalHostTip"></div>
+    </div>
+    <div class="modal-section" id="tasteSection">
+      <div class="modal-section-title">Taste Note<span class="ko">맛 노트</span></div>
+      <div class="modal-text" id="modalTaste"></div>
+    </div>
+    <div class="modal-section" id="pairingSection">
+      <div class="modal-section-title">Pairing<span class="ko">페어링</span></div>
+      <ul class="modal-pairing" id="modalPairing"></ul>
+    </div>
+  </div>
+</div>
+<script>
+const RECIPES = {"1": {"no": "01", "title_ko": "시트러스 스파클러", "title_en": "Citrus Sparkler", "meta": {"난이도": "★ 매우 쉬움", "시간": "3분", "분량": "2인 · 2잔", "조리": "비가열", "보관": "재료 상비"}, "ingredients": [{"name": "산펠레그리노 250mL", "qty": "1~2캔"}, {"name": "레몬 슬라이스", "qty": "2조각 (3mm)"}, {"name": "라임 슬라이스", "qty": "2조각 (3mm)"}, {"name": "스피아민트", "qty": "잎 4~6장"}, {"name": "얼음", "qty": "제빙기 가득"}, {"note": "산펠레그리노는 마시기 30분 전 냉장. 미온이면 탄산이 빠 르게 빠짐."}], "method": [{"text": "Nachtmann 하이볼 2잔에 제빙기 얼음을 70%까지 채운다.", "duration": "30초"}, {"text": "레몬·라임을 3mm 두께로 슬라이스. 각 잔에 1장씩 안쪽에 끼운다.", "duration": "1분"}, {"text": "산펠레그리노를 잔 가장자리를 따라 천천히 따른다. 직접 부으면 탄산이 빠짐.", "duration": ""}, {"text": "민트 잎 2~3장을 손바닥으로 가볍게 쳐서 향을 깨운 뒤 잔 입구에 비스듬히.", "duration": ""}, {"text": "바스푼으로 한 번만 가볍게 저음. 너무 저으면 탄산 끝.", "duration": "5초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼 ×2"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "레몬 안쪽·민트 위"}], "tastenote": "첫 모금에 차가운 탄산이 입천장을 깨우고, 레몬의 산미가 따라 들어온다. 민트는 향으로만. 물보다 가볍고 음료보다 정직한 시작.", "hosttip": "민트는 머들러로 으깨지 말고 손바닥으로 가볍게 친다(slap). 향만 입히는 정도. 으 깨면 쓴맛이 나와 첫 잔의 청량감이 깨진다.", "pairing": ["프로슈토 부라타 · 콜드 보드 시작", "카프레제 꼬치 · 가벼운 매칭", "어떤 코스든 · 공통 웰컴 카드"]}, "2": {"no": "02", "title_ko": "모엣 미니 플루트", "title_en": "Moët Mini Flute", "meta": {"난이도": "★ 매우 쉬움", "시간": "2분", "분량": "2인 · 1병", "조리": "비가열", "보관": "냉장"}, "ingredients": [{"name": "Moët Impérial 200mL", "qty": "1병"}, {"name": "Riedel 샴페인 플루트", "qty": "2개"}, {"name": "딸기 또는 라즈베리", "qty": "잔당 1개 (선택)"}, {"note": "샴페인은 마시기 3시간 전 냉장. 미니 보틀이라 빨리 차가 워짐. 너무 차게 식히면 향이 닫힘 (6~8°C 적정)."}], "method": [{"text": "Riedel 플루트 2잔을 미리 잔 받침에. 잔이 차가우면 더 좋음.", "duration": "10초"}, {"text": "코르크 캡을 제거하고 와이어를 푼다. 한 손으로 코르크를 잡고 병을 천천히 돌 림.", "duration": "30초"}, {"text": "'펑' 소리가 나기 직전에 부드럽게 빼낸다. 정통은 큰 소리가 안 남.", "duration": "10초"}, {"text": "플루트를 45도 기울여 천천히 따름. 거품이 잔의 절반까지 오면 멈춤 → 가라앉 으면 마저 채움.", "duration": "1분"}, {"text": "(선택) 딸기 한 알을 잔 바닥에 떨어뜨림. 기포가 딸기 주변에 모이는 게 보임.", "duration": ""}], "plating": [{"label": "잔", "value": "Riedel 샴페인 플루트 240mL ×2"}, {"label": "따르기", "value": "기울여 거품 통제"}, {"label": "가니시", "value": "딸기 1개 잔 바닥"}], "tastenote": "첫 모금의 산미가 입을 정리하고, 효모 향이 코로 올라온다. 가장 정통적 인 웰컴. 호텔 미니바의 격을 결정짓는 한 잔.", "hosttip": "샴페인은 무조건 잔을 기울여 따라야 한다. 똑바로 세워서 따르면 거품이 폭발해 1/3이 날아간다. 정확히 따르면 한 병으로 잔 4~5잔 가능.", "pairing": ["프로슈토 부라타 · 정통 매칭, 산미가 크리미함 풀어줌", "카프레제 꼬치 · 가벼운 조합", "관자 아부리 · 일식 메인과도 잘 어울림"]}, "3": {"no": "03", "title_ko": "진저 위스키 하이볼", "title_en": "Ginger Whisky Highball", "meta": {"난이도": "★★ 쉬움", "시간": "3분", "분량": "2인 · 2잔", "조리": "비가열", "보관": "재료 상비"}, "ingredients": [{"name": "발베니 14년", "qty": "30mL ×2"}, {"name": "분다버그 진저비어 375mL", "qty": "1병"}, {"name": "레몬 슬라이스", "qty": "2조각"}, {"name": "라임 슬라이스", "qty": "2조각"}, {"name": "스피아민트", "qty": "잔당 2~3장"}, {"name": "얼음", "qty": "제빙기 가득"}, {"note": "분다버그 진저비어는 천연 발효라 일반 진저에일보다 매 콤함이 강함. 발베니의 단맛과 균형이 맞음. 미리 30분 냉장."}], "method": [{"text": "Nachtmann 하이볼에 얼음을 70%까지 채운다. 얼음 적으면 묽어짐.", "duration": "30초"}, {"text": "바켄슈타이거 지거로 발베니 14년 30mL를 따른다. 큰 쪽 한 번.", "duration": "30초"}, {"text": "분다버그 진저비어를 잔 가장자리로 천천히. 잔의 90%까지.", "duration": "1분"}, {"text": "레몬·라임을 얼음 사이로 끼움. 라임은 살짝 짜서 향만.", "duration": "30초"}, {"text": "바스푼으로 위에서 아래로 한 번만. 탄산 보호.", "duration": "10초"}, {"text": "민트를 손바닥으로 한 번 쳐서 잔 입구에 비스듬히.", "duration": "20초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼 ×2"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "레몬·라임 안쪽, 민트 위"}], "tastenote": "위스키의 바닐라·꿀 노트가 진저비어의 매콤함을 만나면서 부드럽게 풀어 진다. 첫 잔에 가장 안전한 시그니처.", "hosttip": "발베니의 프렌치오크는 진저와 만나면 의외로 잘 어울린다. 셰리 위스키(맥캘란 등) 는 진저와 안 맞으니 절대 대체하지 말 것.", "pairing": ["한식 안주 보드 · 먹태·저키 정석 매칭", "관자 아부리 · 일식 메인과도 OK", "야키토리 · 이자카야 톤"]}, "4": {"no": "04", "title_ko": "이탈리안 소다", "title_en": "Italian Soda", "meta": {"난이도": "★ 매우 쉬움", "시간": "2분", "분량": "2인 · 2잔", "조리": "비가열", "보관": "상비"}, "ingredients": [{"name": "폴라라 시칠리아 275mL", "qty": "1~2병"}, {"name": "얼음", "qty": "제빙기 가득"}, {"name": "오렌지 또는 레몬 슬라이스", "qty": "2조각 (선택)"}, {"note": "폴라라는 이탈리아 정통 탄산음료라 일반 환타·콜라와 톤 이 다름. 단맛이 절제됨. 미리 30분 냉장."}], "method": [{"text": "Nachtmann 하이볼에 얼음을 70%까지 채운다.", "duration": "30초"}, {"text": "폴라라 병을 흔들지 말고 천천히. 잔 가장자리로 흘려보내야 탄산이 살아남.", "duration": ""}, {"text": "오렌지·레몬 슬라이스를 얼음 사이로 끼움. 향만 입히기.", "duration": "30초"}, {"text": "바스푼으로 한 번만 가볍게.", "duration": "5초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼 ×2"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "오렌지·레몬 휠 안쪽"}], "tastenote": "이탈리아 시칠리아의 햇빛이 그대로 옮겨온 느낌. 단맛이 절제돼 식전 음 료로 정확. 유럽 미니바의 정통.", "hosttip": "폴라라 24병팩이라 다양하게 시도 가능. 블러드오렌지가 가장 정통, 만다리노는 단 맛 강함, 시칠리아나(레몬)는 가장 산미. 게스트 취향대로.", "pairing": ["프로슈토 부라타 · 이탈리아 정통", "카프레제 꼬치 · 이탈리아 톤 유지", "크래커 셀렉션 · 가벼운 안주"]}, "5": {"no": "05", "title_ko": "프로슈토 부라타", "title_en": "Prosciutto & Burrata", "meta": {"난이도": "★★ 쉬움", "시간": "7분", "분량": "2~3인 · 1접시", "조리": "비가열", "보관": "당일 사용"}, "ingredients": [{"name": "벨지오이오조 부라타 113g", "qty": "1개"}, {"name": "시테리오 프로슈토", "qty": "4~5장"}, {"name": "와일드 루꼴라", "qty": "한 줌"}, {"name": "칼라마타 올리브", "qty": "5~6알"}, {"name": "스테비아 방울토마토", "qty": "5~6개"}, {"name": "아카시아 꿀", "qty": "1줄"}, {"name": "굵은소금·후추", "qty": "약간"}, {"note": "부라타는 차갑게 보관해야 하지만 서빙 직전 15분 실온에 두면 더 부드러움. 너무 차가우면 크림이 흘러내리지 않음."}], "method": [{"text": "부라타를 포장에서 꺼내 키친타올로 표면 물기를 살짝 닦는다.", "duration": "30초"}, {"text": "보울보울 디너플레이트 중앙에 부라타를 통째로. 잘라서 내지 말 것.", "duration": "20초"}, {"text": "부라타 주위에 와일드 루꼴라를 한 줌 뿌린다. 너무 빽빽하지 않게.", "duration": "30초"}, {"text": "프로슈토 4~5장을 손으로 느슨하게 굽혀서 부라타 옆에 놓는다. 평평하게 펴지 말 것.", "duration": "1분"}, {"text": "칼라마타 올리브 5~6알과 방울토마토 5~6개를 균일하게 분산.", "duration": "1분"}, {"text": "아카시아 꿀을 부라타 위에 한 줄로 두름. 굵은소금 한 자밤 + 후추 한 번 갈음.", "duration": ""}, {"text": "카스 테이블워터 크래커를 작은 접시에 별도로 곁들임.", "duration": "30초"}], "plating": [{"label": "접시", "value": "보울보울 디너 27cm"}, {"label": "부라타", "value": "중앙 통째로"}, {"label": "주변", "value": "시계방향 프로슈토→루꼴라→올리브→토마토"}, {"label": "마무리", "value": "꿀 한 줄 + 후추"}], "tastenote": "부라타를 자르면 안의 크림이 흘러나오면서 프로슈토의 짠맛, 루꼴라의 쌉쌀함, 꿀의 단맛이 한 입에 모인다. 호텔 콜드 보드의 정통 한 접시. 와 인과 만나는 순간 완성.", "hosttip": "꿀은 서빙 직전에 두를 것. 미리 두르면 부라타가 꿀 무게로 무너짐. 손님 앞에서 두 르는 것 자체가 장면.", "pairing": ["모엣 미니 · 산미가 크리미함 닦아냄", "화이트 와인 · 이탈리아 백포도주 정석", "시드립 토닉 · 비알콜 페어링"]}, "6": {"no": "06", "title_ko": "하몬 파르미지아노 보드", "title_en": "Jamón & Parmigiano Board", "meta": {"난이도": "★★ 쉬움", "시간": "10분", "분량": "2~4인 · 1보드", "조리": "비가열", "보관": "당일 사용"}, "ingredients": [{"name": "하몬 이베리코", "qty": "70~100g"}, {"name": "파르미지아노 레지아노", "qty": "150g"}, {"name": "시테리오 살라미", "qty": "10장"}, {"name": "마카다미아", "qty": "한 줌"}, {"name": "무염 호두", "qty": "한 줌"}, {"name": "Lindt 90% 다크초콜릿", "qty": "3~4조각"}, {"name": "Lindt 85% 다크초콜릿", "qty": "2~3조각"}, {"name": "칼라마타 올리브", "qty": "5~6알"}, {"name": "아카시아 꿀", "qty": "작은 종지"}, {"note": "파르미지아노는 칼로 자르지 말고 손으로 부숨. 거친 단면 이 결을 따라 부서져 훨씬 고급스러움."}], "method": [{"text": "파르미지아노 한 덩어리(150g)를 칼 끝으로 결을 따라 손으로 거칠게 부숨. 작은 덩어리들로.", "duration": "2분"}, {"text": "하몬 이베리코 4~5장을 부드럽게 굽혀서 보드 한 쪽에 놓는다.", "duration": "1분"}, {"text": "살라미 슬라이스 10장을 부채꼴로 펼쳐 다른 한 쪽에.", "duration": "1분"}, {"text": "마카다미아·호두를 따로 무더기로. 섞지 말 것 — 각 견과의 정체성 유지.", "duration": "1분"}, {"text": "Lindt 90%와 85%를 각각 조각내 견과 옆에 배치.", "duration": "1분"}, {"text": "칼라마타 올리브 5~6알을 분산. 작은 종지에 꿀을 따라 중앙에 둔다.", "duration": "1분"}, {"text": "사브르 칵테일 포크 4개를 보드 옆에 놓는다 (각자 2개씩, 위생감).", "duration": "30초"}], "plating": [{"label": "보드", "value": "우드 보드 또는 보울보울 27cm"}, {"label": "12시", "value": "파르미지아노 (손으로 부순)"}, {"label": "3시", "value": "하몬 (느슨하게)"}, {"label": "6시", "value": "견과 + 초콜릿"}, {"label": "9시", "value": "살라미 슬라이스"}, {"label": "중앙", "value": "꿀 종지"}], "tastenote": "파르미지아노의 결정 알갱이가 입에서 부서지면서 짠맛·고소함이 폭발하 고, 꿀의 단맛이 그 위를 덮는다. 하몬의 기름기, 살라미의 향신료, 견과의 식감 — 위스키의 모든 노트가 살아나는 한 보드.", "hosttip": "파르미지아노에 꿀을 살짝 찍어 먹는 게 정통. 호스트가 첫 시범 — 작은 덩어리 하 나에 꿀 한 방울 찍어 손님에게 권함. 이게 한 마디 시작점.", "pairing": ["발베니 14년 니트 · 프렌치오크 + 파르미지아노 정석", "Glenmorangie Signet · 다크초콜릿과 매칭", "레드 와인 · 유럽 정통"]}, "7": {"no": "07", "title_ko": "카프레제 꼬치", "title_en": "Caprese Skewer", "meta": {"난이도": "★ 매우 쉬움", "시간": "5분", "분량": "2인 · 6꼬치", "조리": "비가열", "보관": "재료 상비"}, "ingredients": [{"name": "방울토마토", "qty": "12개"}, {"name": "미니 모차렐라(보콘치니)", "qty": "6개"}, {"name": "바질 잎", "qty": "12장"}, {"name": "발사믹 식초 (글레이즈)", "qty": "한 줄"}, {"name": "올리브 오일", "qty": "한 줄"}, {"name": "굵은소금·후추", "qty": "약간"}, {"name": "대나무 하트 꼬치", "qty": "6개"}, {"note": "발사믹은 일반 식초가 아닌 글레이즈(농축 시럽)를 써야 점성이 살아남. 일반 발사믹은 흘러내려서 비주얼 망함."}], "method": [{"text": "방울토마토를 씻고 키친타올로 물기 제거. 물기 남으면 꼬치에서 미끄러짐.", "duration": ""}, {"text": "바질 잎은 손으로 살짝 비벼 향을 깨우고, 작은 잎은 그대로·큰 잎은 반 접음.", "duration": ""}, {"text": "꼬치에 [토마토 → 모차렐라 → 바질 → 토마토] 순으로 끼움. 한 꼬치당 한 세 트.", "duration": "2분"}, {"text": "접시에 꼬치 6개를 한 방향으로 평행 정렬. 가지런함이 비주얼의 80%.", "duration": "30초"}, {"text": "발사믹 글레이즈를 지그재그로 한 줄, 올리브 오일 한 방울. 굵은소금 + 후추 마 무리.", "duration": "30초"}], "plating": [{"label": "접시", "value": "보울보울 디너 또는 사각 화이트"}, {"label": "정렬", "value": "꼬치 6개 평행으로"}, {"label": "마무리", "value": "발사믹 줄 + 올리브 오일 한 방울"}], "tastenote": "한 입에 토마토 단즙 + 모차렐라 우유 향 + 바질 허브가 동시에. 발사믹의 새콤달콤이 마지막에 정리. 가장 안전한 디폴트 카드.", "hosttip": "토마토는 꼭지 쪽이 위로 가도록 끼움. 단면이 위면 즙이 빠짐. 미니 모차렐라가 너 무 크면 반으로 자름.", "pairing": ["모엣 미니 · 샴페인 정통", "이탈리안 소다 · 비알콜 매칭", "진토닉 (예정) · 허브 톤 살림"]}, "8": {"no": "08", "title_ko": "프로슈토 청포도 꼬치", "title_en": "Prosciutto & Grape Skewer", "meta": {"난이도": "★ 매우 쉬움", "시간": "5분", "분량": "2인 · 8꼬치", "조리": "비가열", "보관": "재료 상비"}, "ingredients": [{"name": "청포도(머스캣 또는 톰슨)", "qty": "16개"}, {"name": "시테리오 프로슈토", "qty": "8장"}, {"name": "스피아민트 잎", "qty": "8장"}, {"name": "대나무 하트 꼬치", "qty": "8개"}, {"name": "올리브 오일", "qty": "한 방울 (선택)"}, {"name": "흑후추", "qty": "약간"}, {"note": "프로슈토 멜론의 변주. 멜론은 호출 식재라 폐기 위험. 청 포도는 상비 가능 + 즙 풍부 + 단단함."}], "method": [{"text": "청포도를 씻어 키친타올로 물기 제거.", "duration": "1분"}, {"text": "프로슈토 8장을 펼치고, 각 장에 청포도 1개 + 민트 1장 올림.", "duration": "1분"}, {"text": "프로슈토로 청포도+민트를 감싸 굴리듯이 둘둘 만다. 너무 꽉 말지 말 것.", "duration": "1분"}, {"text": "꼬치에 [청포도 → 프로슈토 둘둘 → 청포도] 순으로 끼움. 한 꼬치당 한 세트.", "duration": ""}, {"text": "접시에 평행 또는 부채꼴 정렬. 후추 한 번 갈아 마무리.", "duration": "30초"}], "plating": [{"label": "접시", "value": "보울보울 또는 화이트 사각"}, {"label": "정렬", "value": "꼬치 8개 평행 또는 부채꼴"}, {"label": "마무리", "value": "후추 한 번"}], "tastenote": "차가운 청포도의 단즙이 터지면서 프로슈토의 짠맛과 만나고, 민트의 청 량감이 입을 정리. 호텔 와인바의 정통 카나페.", "hosttip": "민트 대신 바질도 가능. 멜론 호출한 날엔 청포도 자리에 멜론 큐브 — 같은 레시피.", "pairing": ["모엣 미니 · 산미 + 단맛 정석", "화이트 와인 · 쇼비뇽 블랑 결", "이탈리안 소다 · 비알콜"]}, "9": {"no": "09", "title_ko": "한식 안주 보드", "title_en": "Korean Bar Board", "meta": {"난이도": "★ 매우 쉬움", "시간": "3분", "분량": "2~3인 · 1보드", "조리": "비가열", "보관": "상비"}, "ingredients": [{"name": "곰곰 먹태채", "qty": "한 줌 (30g)"}, {"name": "잭링크스 비프 저키", "qty": "50g"}, {"name": "마루에스 크리스피 오징어", "qty": "한 줌"}, {"name": "오뚜기 마요네즈", "qty": "작은 종지"}, {"name": "타바스코", "qty": "작은 종지"}, {"note": "가장 빠른 카드. 봉지에서 꺼내서 그릇에 옮기는 게 전부. 모든 한식 안주는 봉지째 내지 않는 게 호텔 톤."}], "method": [{"text": "먹태채를 봉지에서 꺼내 한 무더기로. 너무 평평하게 깔지 말고 봉긋하게.", "duration": ""}, {"text": "저키를 가위로 한 입 크기로 잘라 다른 한 무더기로. 너무 잘게 자르지 말 것.", "duration": ""}, {"text": "크리스피 오징어를 자연스럽게 흩어 놓음. 둥근 링 형태 살리기.", "duration": "30초"}, {"text": "마요네즈와 타바스코를 작은 종지 2개에 따로. 섞지 않음.", "duration": "30초"}, {"text": "사브르 칵테일 포크 2개 옆에. 손으로 집어 마요+타바스코 찍어 먹게.", "duration": "10초"}], "plating": [{"label": "보드", "value": "우드 보드 또는 사각 화이트"}, {"label": "구분", "value": "먹태·저키·오징어 세 무더기"}, {"label": "소스", "value": "마요·타바스코 작은 종지 2개"}], "tastenote": "먹태의 짠맛·고소함 + 마요의 부드러움 + 타바스코의 매콤함이 한 입에. 위스키 하이볼·맥주와 만나면 끝이 안 보임. 가장 빠르고 가장 정직한 한 보드.", "hosttip": "먹태채는 마요 + 타바스코 1:1로 섞어 찍는 게 정석. 호스트가 먼저 시범 — 시범 자 체가 응대 모드. 모든 한식 안주는 손으로 집어먹어도 OK인 룰.", "pairing": ["진저 위스키 하이볼 · 정석", "Asahi 슈퍼 드라이 · 맥주 톤", "참이슬 fresh · 전통"]}, "10": {"no": "10", "title_ko": "크래커 셀렉션", "title_en": "Cracker Selection", "meta": {"난이도": "★ 매우 쉬움", "시간": "3분", "분량": "2~4인", "조리": "비가열", "보관": "상비"}, "ingredients": [{"name": "카스 테이블워터 크래커", "qty": "8~10장"}, {"name": "파르미지아노 또는 카망베르", "qty": "치즈 한 조각"}, {"name": "아카시아 꿀", "qty": "작은 종지"}, {"name": "마카다미아 또는 호두", "qty": "한 줌 (선택)"}, {"note": "이 메뉴는 다른 콜드 보드의 동반. 단독으로 내기보다 부 라타·하몬 보드와 함께. 그래도 한 카드는 등록."}], "method": [{"text": "크래커 8~10장을 접시에 부채꼴 또는 분산해서 놓는다. 너무 가지런하지 않게.", "duration": ""}, {"text": "파르미지아노 한 조각(또는 카망베르)을 크래커 옆에. 손으로 부순 거친 단면이 좋음.", "duration": "30초"}, {"text": "아카시아 꿀을 작은 종지에 따라 같이 놓음.", "duration": "30초"}, {"text": "(선택) 마카다미아·호두를 한 줌 분산. 식감 보완용.", "duration": "30초"}], "plating": [{"label": "접시", "value": "보울보울 디너 또는 작은 화이트"}, {"label": "크래커", "value": "겹쳐서 부채꼴 또는 분산"}, {"label": "치즈", "value": "옆에 한 조각"}, {"label": "꿀", "value": "작은 종지"}], "tastenote": "크래커의 짠 빵맛이 치즈와 꿀의 단맛을 받쳐줌. 단독으로는 가볍지만 와 인·위스키와 만나면 정직한 받침. 호텔 미니바의 디폴트 동반.", "hosttip": "크래커에 치즈 한 조각 + 꿀 한 방울이 정석 조합. 손님이 어떻게 먹는지 모르면 호 스트가 한 번 만들어 권함. 그것 자체가 응대.", "pairing": ["모엣 미니 · 치즈 + 샴페인 정석", "발베니 14년 · 파르미지아노 + 위스키", "화이트 와인 · 치즈 일반"]}, "11": {"no": "11", "title_ko": "관자 아부리 명란마요", "title_en": "Scallop Aburi · Mentai Mayo", "meta": {"난이도": "★★ 쉬움", "시간": "5분", "분량": "2인 · 6~8개", "조리": "토치", "보관": "관자 냉동 6개월"}, "ingredients": [{"name": "냉동 가리비 관자", "qty": "6~8개"}, {"name": "저염 명란젓", "qty": "30g"}, {"name": "큐피 마요네즈", "qty": "30g"}, {"name": "쪽파 (송송)", "qty": "약간"}, {"name": "레몬즙", "qty": "반 작은술"}, {"name": "흑후추", "qty": "약간"}, {"note": "관자는 냉장 해동 30분. 급하면 비닐 봉투째 찬물에 10분. 물기를 꼼꼼히 닦아야 명란마요가 흘러내리지 않음."}], "method": [{"text": "해동된 관자를 키친타올로 물기 꼼꼼히 닦는다.", "duration": "2분"}, {"text": "볼에 명란 + 마요 + 레몬즙 섞음. 알이 약간 풀어지는 정도.", "duration": "1분"}, {"text": "관자를 보울보울 디너플레이트에 한 방향으로 가지런히.", "duration": "20초"}, {"text": "각 관자 위에 명란마요를 한 티스푼씩 도톰하게. 평평하면 비주얼 죽음.", "duration": "30초"}, {"text": "Soto 토치로 표면만. 한 개당 15~20초. 부글거리면서 갈색이 나는 순간 멈춤.", "duration": ""}, {"text": "쪽파를 위에 흩뿌리고 후추 한 번 갈음.", "duration": "10초"}], "plating": [{"label": "접시", "value": "보울보울 27cm"}, {"label": "정렬", "value": "한 방향 가지런히"}, {"label": "마무리", "value": "쪽파 + 후추"}], "tastenote": "관자의 단맛이 차갑게 들어오고, 토치로 그을린 명란마요의 짠맛·고소함· 옅은 매콤함이 위에서 따뜻하게 덮인다. 차가운 속 + 따뜻한 표면의 온도 대비가 호텔 룸서비스 톤을 만든다.", "hosttip": "토치를 너무 오래 대면 명란이 익어 비린내가 난다. 표면 5mm만 카라멜라이즈된 다는 느낌으로 짧게. 관자 속은 익히지 않는 게 정답 — 살짝 차갑게 들어가서 입에 서 따뜻한 마요와 만나는 게 핵심.", "pairing": ["발베니 14년 니트 · 프렌치오크가 짠맛 풀어줌", "위스키 하이볼 · 데일리 페어링", "모엣 미니 · 산미가 기름기 닦아냄"]}, "12": {"no": "12", "title_ko": "카망베르 통토치", "title_en": "Camembert Aburi", "meta": {"난이도": "★★ 쉬움", "시간": "5분", "분량": "2~3인 · 1휠", "조리": "토치", "보관": "냉장 2~4주"}, "ingredients": [{"name": "카망베르 또는 브리 휠", "qty": "1개 (250g)"}, {"name": "아카시아 꿀", "qty": "1~2큰술"}, {"name": "호두 (무염)", "qty": "한 줌"}, {"name": "타임 가지", "qty": "2~3개"}, {"name": "크래커", "qty": "동반용"}, {"note": "카망베르는 15분 실온에 두면 안이 부드러움. 차가우면 토 치해도 속이 안 녹음."}], "method": [{"text": "카망베르 휠을 실온에 15분 둠. 포장 그대로. 15분", "duration": "사전"}, {"text": "나이프로 윗면 껍질만 살짝 가로 자국 (격자 또는 X자). 토치 자국 잘 받게.", "duration": ""}, {"text": "우드 보드 또는 흰 접시 중앙에 통째로 올림.", "duration": "10초"}, {"text": "Soto 토치로 윗면 전체를 골고루. 1분 정도. 표면이 노릇하면서 안이 살짝 녹기 시작.", "duration": "1분"}, {"text": "아카시아 꿀을 윗면에 한 줄로 두름. 옆으로 흘러내려도 OK.", "duration": "20초"}, {"text": "호두 한 줌과 타임 가지 2~3개를 위에 흩뿌림.", "duration": "20초"}, {"text": "크래커를 옆에 별도 접시. 손님이 직접 떠 먹게.", "duration": "10초"}], "plating": [{"label": "접시", "value": "보울보울 또는 우드 보드"}, {"label": "배치", "value": "휠 중앙 통째로"}, {"label": "드리즐", "value": "꿀 한 줄"}, {"label": "토핑", "value": "호두 + 타임"}], "tastenote": "토치된 표면이 바삭하면서 안의 크림이 흘러나오고, 꿀의 단맛 + 호두의 고소함 + 타임의 허브 향이 한 입에. 와인바의 정통 시그니처 디저트. 식 전·식후 둘 다 OK.", "hosttip": "카망베르 안이 흐를 정도가 되면 완성. 토치를 표면에만 너무 짧게 대면 안이 차가 워 흐르지 않음. 표면 노릇하게 + 안이 부드럽게 = 1분 토치가 적정.", "pairing": ["Glenmorangie Signet · 초콜릿 노트가 카망베르와 매칭", "화이트 와인 · 샤르도네 또는 리슬링", "모엣 미니 · 샴페인 산미"]}, "13": {"no": "13", "title_ko": "모듬 야키토리", "title_en": "Mixed Yakitori", "meta": {"난이도": "★★ 쉬움", "시간": "8분", "분량": "2~3인 · 8꼬치", "조리": "전자레인지+토치", "보관": "냉동 상비"}, "ingredients": [{"name": "명품조선 모듬꼬치 8꼬치", "qty": "1세트 (380g)"}, {"name": "동봉 데리야끼 소스", "qty": "50g"}, {"name": "쪽파 (송송)", "qty": "약간"}, {"name": "깨", "qty": "약간 (선택)"}, {"note": "냉동 상태에서 바로 조리. 해동 불필요. 전자레인지 → 토 치가 너의 핵심 워크플로우."}], "method": [{"text": "냉동 꼬치를 포장에서 꺼내 접시에 가지런히. 너무 겹치지 말 것.", "duration": "30초"}, {"text": "전자레인지 700W로 3~4분. 내부가 따뜻해질 정도. 표면은 그대로 OK.", "duration": "4분"}, {"text": "동봉 데리야끼 소스를 붓이나 스푼으로 표면에 발라줌. 골고루.", "duration": "1분"}, {"text": "Soto 토치로 꼬치별 표면을 15~20초씩. 데리야끼가 부글거리며 카라멜라이즈.", "duration": ""}, {"text": "우드 보드에 한 방향으로 평행 정렬. 소스 종지 옆에.", "duration": "30초"}, {"text": "쪽파를 흩뿌리고 (선택) 깨를 살짝.", "duration": "10초"}], "plating": [{"label": "접시", "value": "우드 보드 또는 보울보울"}, {"label": "정렬", "value": "꼬치 8개 평행으로"}, {"label": "소스 종지", "value": "별도 작은 그릇"}, {"label": "마무리", "value": "쪽파 + 깨"}], "tastenote": "냉동에서 5분 만에 이자카야 한 접시가 완성된다. 표면 카라멜 + 안의 따 뜻한 고기 + 데리야끼의 단짠 + 토치 향. 가장 빠르고 가장 임팩트 큰 시그 니처 메인.", "hosttip": "토치 단계에서 소스가 두 번 부글거리면 그게 정점. 더 하면 탄맛이 나옴. 8꼬치 한 번에 토치하지 말고 한 개씩 정확하게 — 손님 앞에서 한 개씩 하는 게 더 멋있음.", "pairing": ["진저 위스키 하이볼 · 이자카야 정석", "Asahi 슈퍼 드라이 · 맥주 톤", "발베니 온더락 · 위스키 메인 페어링"]}, "14": {"no": "14", "title_ko": "파닭 꼬치", "title_en": "Padak Skewer", "meta": {"난이도": "★★ 쉬움", "시간": "8분", "분량": "2~3인 · 12꼬치 중 6~8", "조리": "전자레인지+토치", "보관": "냉동 상비"}, "ingredients": [{"name": "플레이트 국내산 파닭꼬치", "qty": "12개 중 6~8개 (50g×8)"}, {"name": "동봉 숯불 데리야끼 소스", "qty": "150g 중 적당량"}, {"name": "쪽파 (송송)", "qty": "약간"}, {"name": "깨", "qty": "약간"}, {"name": "후추", "qty": "약간"}, {"note": "12꼬치 단위라 한 번에 다 굽지 말고 6~8개만 빠져 나오 게. 나머지는 다시 냉동."}], "method": [{"text": "냉동 꼬치 6~8개를 접시에 놓는다. 너무 겹치지 말 것.", "duration": "30초"}, {"text": "전자레인지 700W로 3~4분. 속이 따뜻해질 정도.", "duration": "4분"}, {"text": "동봉 숯불 데리야끼 소스를 붓으로 발라줌. 살짝 매콤한 향.", "duration": "1분"}, {"text": "Soto 토치로 꼬치별 표면을 20초씩. 데리야끼 캐러멜화 + 표면 바삭함.", "duration": "2분"}, {"text": "접시에 평행 정렬. 한 방향으로.", "duration": "20초"}, {"text": "쪽파 + 깨 + 후추를 마무리. 향과 비주얼 살림.", "duration": "10초"}], "plating": [{"label": "접시", "value": "우드 보드 또는 보울보울"}, {"label": "정렬", "value": "꼬치 평행으로"}, {"label": "소스", "value": "별도 종지 또는 발라서"}, {"label": "마무리", "value": "쪽파 + 깨 + 후추"}], "tastenote": "데리야끼의 단짠이 토치로 카라멜화되면서 닭의 짠맛과 만나고, 쪽파의 청량감이 입을 정리. 야식 톤이 아닌 호스트 톤. Asahi와의 매칭이 정직 함.", "hosttip": "닭은 야키토리와 톤이 다르다. 분식 톤이 아니라 이자카야 톤으로 가려면 정렬과 가 니시가 중요. 봉지째 내는 순간 분식집이 됨. 접시 정렬 + 쪽파 + 후추 = 호텔 톤.", "pairing": ["Asahi 슈퍼 드라이 · 맥주 정석", "진저 위스키 하이볼 · 위스키 톤", "참이슬 fresh · 전통 한식 톤"]}, "15": {"no": "15", "title_ko": "연어 타다키", "title_en": "Salmon Tataki", "meta": {"난이도": "★★★ 보통", "시간": "10분", "분량": "2인 · 8~10조각", "조리": "토치", "보관": "당일 사용 (호출)"}, "ingredients": [{"name": "연어 사시미용", "qty": "200g"}, {"name": "폰즈 소스", "qty": "30mL"}, {"name": "무즙", "qty": "1큰술"}, {"name": "쪽파 (송송)", "qty": "약간"}, {"name": "레몬 슬라이스", "qty": "1~2조각 (가니시)"}, {"name": "간장·미림", "qty": "약간 (선택)"}, {"note": "연어는 호출 식재. 당일 배송으로 받아 그날 소진. 사시미 용 등급으로 확인. 표면만 토치하기 위해 두께 2cm 정도 통 덩어리로 받는 게 좋음."}], "method": [{"text": "연어 덩어리를 키친타올로 표면 물기 닦음.", "duration": "30초"}, {"text": "Soto 토치로 표면을 5~10초씩 빠르게. 표면만 익히고 속은 생살 유지. 4면 골고 루.", "duration": "1분"}, {"text": "토치 후 키친타올로 한 번 더 닦음. 표면이 마른 상태에서 잘라야 깔끔.", "duration": "30초"}, {"text": "빅토리녹스 셰프나이프로 5mm 두께로 슬라이스. 결 반대 방향으로 잘라야 식 감 살아남.", "duration": "3분"}, {"text": "접시에 부채꼴 또는 평행으로 정렬. 가지런함이 중요.", "duration": "1분"}, {"text": "폰즈 소스를 작은 종지에 따로. 무즙을 한쪽에 한 큰술.", "duration": "30초"}, {"text": "쪽파 흩뿌리고 레몬 슬라이스 1~2장을 옆에.", "duration": "20초"}], "plating": [{"label": "접시", "value": "흰 사각 또는 보울보울"}, {"label": "정렬", "value": "슬라이스 부채꼴 또는 평행"}, {"label": "소스", "value": "폰즈 종지"}, {"label": "마무리", "value": "무즙 + 쪽파 + 레몬"}], "tastenote": "토치된 표면의 고소함 + 안의 생연어 단맛 + 폰즈의 산미·간장 짠맛 + 무 즙의 청량감이 한 입에. 정통 일식 사시미 메인. 호스트의 칼 솜씨가 드러 나는 카드.", "hosttip": "토치는 표면 색이 살짝 바뀌는 정도까지만. 너무 오래 대면 살이 익어 식감이 망함. 칼은 한 번에 끝까지 — 톱질하지 말 것. 잘 안 들면 새 칼날 또는 더 차갑게.", "pairing": ["사케 (예정) · 정통 일식", "진토닉 (예정) · 허브 톤", "화이트 와인 · 쇼비뇽 블랑"]}, "16": {"no": "16", "title_ko": "토치 마시멜로 하트 꼬치", "title_en": "Marshmallow Heart Skewer", "meta": {"난이도": "★★ 쉬움", "시간": "5분", "분량": "2인 · 4~6꼬치", "조리": "토치", "보관": "재료 상비"}, "ingredients": [{"name": "마시멜로 화이트", "qty": "8~12개"}, {"name": "스위티오 바나나", "qty": "1개"}, {"name": "피스타치오 스프레드", "qty": "1줄"}, {"name": "설향 딸기", "qty": "3~4개"}, {"name": "Lindt 90% 다크초콜릿", "qty": "1조각"}, {"name": "대나무 하트 꼬치", "qty": "4~6개"}, {"note": "너의 시그니처 카드. 하트 꼬치 자체가 비주얼. 토치 작업 은 손님 앞에서 직접 — 그게 이 코스의 핵심 장면."}], "method": [{"text": "바나나를 어슷썰기로 6~8조각.", "duration": "1분"}, {"text": "대나무 하트 꼬치에 [마시멜로 → 바나나 → 마시멜로] 순으로 끼움. 4~6개.", "duration": ""}, {"text": "Soto 토치로 마시멜로 표면만 카라멜라이즈. 한 개당 15~20초씩. 부풀면서 표면 갈색.", "duration": "2분"}, {"text": "리코 과일트레이에 평행 정렬.", "duration": "20초"}, {"text": "피스타치오 스프레드를 지그재그로 한 줄 두름. 옆에 딸기 3~4개.", "duration": "30초"}, {"text": "Lindt 90%를 칼로 잘게 부숴 위에 흩뿌림.", "duration": "20초"}], "plating": [{"label": "접시", "value": "리코 과일트레이"}, {"label": "정렬", "value": "꼬치 4~6개 평행"}, {"label": "드리즐", "value": "피스타치오 스프레드 1줄"}, {"label": "마무리", "value": "초콜릿 가루 + 딸기"}], "tastenote": "토치된 마시멜로의 바삭한 표면 + 안의 끈끈한 단맛 + 바나나의 부드러운 단맛 + 피스타치오의 고소함 + 다크초콜릿의 쌉쌀함이 한 꼬치에. 호텔 룸서비스 디저트의 정점.", "hosttip": "토치 작업을 손님 앞에서 직접. 불빛 + 카라멜 향 + 하트 모양 = 거의 반칙급 카드. 연인 모드에선 이거 한 번이면 끝.", "pairing": ["Glenmorangie Signet · 초콜릿 노트 정석", "정성 에스프레소 · 단맛 정리", "발베니 14년 · 위스키 디저트"]}, "17": {"no": "17", "title_ko": "초콜릿 너트 플레이트", "title_en": "Chocolate & Nut Plate", "meta": {"난이도": "★ 매우 쉬움", "시간": "3분", "분량": "2~3인", "조리": "비가열", "보관": "상비"}, "ingredients": [{"name": "Lindt 90% 다크초콜릿", "qty": "3~4조각"}, {"name": "Lindt 85% 다크초콜릿", "qty": "2~3조각"}, {"name": "호주산 마카다미아", "qty": "한 줌"}, {"name": "무염 호두", "qty": "한 줌"}, {"note": "가장 빠른 디저트 카드. 봉지에서 꺼내 접시에 옮기는 게 전부. 위스키 페어링의 정직한 받침."}], "method": [{"text": "Lindt 90%를 3~4조각, 85%를 2~3조각 떼어 접시 한 쪽에. 섞지 말 것.", "duration": "1분"}, {"text": "마카다미아 한 줌을 중앙에 무더기로.", "duration": "30초"}, {"text": "호두를 다른 한 쪽에 무더기로. 견과끼리도 섞지 않음.", "duration": "30초"}, {"text": "(선택) 사브르 칵테일 포크 2개를 옆에. 손으로 집어 먹어도 OK.", "duration": "10초"}], "plating": [{"label": "접시", "value": "보울보울 또는 작은 화이트"}, {"label": "좌", "value": "Lindt 90% / 85% 따로"}, {"label": "중", "value": "마카다미아"}, {"label": "우", "value": "호두"}], "tastenote": "다크초콜릿의 90%·85% 차이가 입에서 또렷이. 마카다미아의 우유 같은 부드러움 + 호두의 거친 고소함이 위스키 노트와 정확히 매칭. 위스키 페 어링의 정직한 받침.", "hosttip": "이 메뉴의 핵심은 섞지 않는 것. 봉지에서 부어 한 무더기로 만들면 분식집. 각 견과 와 초콜릿의 정체성을 살리는 정렬이 호텔 톤. 게스트가 한 종류씩 골라 먹게.", "pairing": ["발베니 14년 니트 · 위스키 + 초콜릿 정석", "Glenmorangie Signet · 초콜릿 노트 동질감", "정성 에스프레소 · 디저트 마무리"]}, "18": {"no": "18", "title_ko": "계절 과일 트레이", "title_en": "Seasonal Fruit Tray", "meta": {"난이도": "★ 매우 쉬움", "시간": "5분", "분량": "2~4인", "조리": "비가열", "보관": "당일"}, "ingredients": [{"name": "설향 딸기", "qty": "5~6개"}, {"name": "청포도", "qty": "한 송이 (10~12알)"}, {"name": "스위티오 바나나", "qty": "1개"}, {"name": "스테비아 방울토마토", "qty": "5~6개"}, {"name": "민트 잎", "qty": "약간 (선택)"}, {"note": "아침 모드의 디폴트 카드. 비가열, 5분 완성, 손님이 자고 일어나서 가벼운 시작. 손님 알러지 확인 한 번."}], "method": [{"text": "딸기를 흐르는 물에 가볍게 씻고 키친타올로 물기 제거. 꼭지는 떼지 말 것 (먹기 직전).", "duration": "1분"}, {"text": "청포도를 송이째 또는 알 분리. 송이째가 시각적으로 좋음.", "duration": "30초"}, {"text": "바나나를 어슷썰기로 5~6조각.", "duration": "30초"}, {"text": "방울토마토를 그대로 (씻기만).", "duration": "30초"}, {"text": "접시에 4구역으로 배치. 한 종류씩 무더기로.", "duration": "1분"}, {"text": "(선택) 민트 잎 1~2장을 위에. 향과 비주얼.", "duration": "10초"}], "plating": [{"label": "접시", "value": "보울보울 또는 리코 트레이"}, {"label": "구분", "value": "딸기·청포도·바나나·토마토 4구역"}, {"label": "마무리", "value": "민트 1~2장"}], "tastenote": "딸기의 발랄한 산미 + 청포도의 무난한 단맛 + 바나나의 부드러움 + 방울 토마토의 새콤함이 한 접시에. 아침 호텔 어메니티의 정통.", "hosttip": "아침엔 단순함이 정직. 너무 화려하게 만들지 말 것. 손님이 어제 마신 술 깨러 일어 났음. 가벼운 비주얼 + 정직한 단맛이 답.", "pairing": ["정성 라떼 · 아침 정석", "네스프레소 아메리카노 · 데일리 모드", "산펠레그리노 · 물 대용"]}, "19": {"no": "19", "title_ko": "스모어 미니", "title_en": "S'mores Miniature", "meta": {"난이도": "★★ 쉬움", "시간": "5분", "분량": "2인 · 3~4개", "조리": "토치", "보관": "상비"}, "ingredients": [{"name": "카스 테이블워터 크래커", "qty": "8장"}, {"name": "마시멜로 화이트", "qty": "4~6개"}, {"name": "Lindt 90% 다크초콜릿", "qty": "4~6조각"}, {"note": "캠핑 디저트의 호텔 버전. 크래커는 일반 그레이엄 대신 카스 테이블워터로 — 호텔 톤 유지."}], "method": [{"text": "크래커 4장 위에 다크초콜릿 1~2조각씩 올림. 크래커 면적을 다 덮지 않게.", "duration": ""}, {"text": "그 위에 마시멜로 1~2개씩. 초콜릿이 살짝 보이게.", "duration": "30초"}, {"text": "Soto 토치로 마시멜로 표면만. 한 개당 15~20초. 표면이 갈색이면서 부풀음.", "duration": ""}, {"text": "토치 직후 다른 크래커 1장을 위에 비스듬히 살짝 얹음. 샌드위치 형태이지만 완 전히 닫지 않음.", "duration": "30초"}, {"text": "접시에 평행 정렬. 옆에 남은 초콜릿 조각을 잘게 부숴 흩뿌림.", "duration": "1분"}], "plating": [{"label": "접시", "value": "보울보울 또는 우드 보드"}, {"label": "배치", "value": "스모어 3~4개 평행"}, {"label": "마무리", "value": "초콜릿 가루 흩뿌림"}], "tastenote": "토치된 마시멜로의 바삭함 + 안의 끈적한 단맛 + 다크초콜릿의 쌉쌀함 + 크래커의 짠 빵맛이 한 입에. 캠핑 추억을 호텔 객실로 옮긴 한 입.", "hosttip": "크래커는 닫지 말고 살짝 얹기만. 완전히 닫으면 마시멜로가 짓눌리고 비주얼이 망 함. 한 입에 베어물면 마시멜로의 끈적임이 살아남.", "pairing": ["에스프레소 · 단맛 정리", "위스키 (발베니) · 다크초콜릿 정석", "Glenmorangie Signet · 디저트 페어링"]}, "20": {"no": "20", "title_ko": "발베니 14년 니트", "title_en": "Balvenie 14 · Neat", "meta": {"난이도": "★ 매우 쉬움", "시간": "1분", "분량": "1~2잔", "조리": "비가열", "보관": "실온 상비"}, "ingredients": [{"name": "발베니 14년 캐리비안 캐스크", "qty": "잔당 25~30mL"}, {"name": "산펠레그리노 250mL", "qty": "체이서용"}, {"name": "Glencairn 위스키 테이스팅 잔", "qty": "1~2개"}, {"note": "너의 데일리 카드. 가니시 없음, 추가 재료 없음. 잔과 위 스키만으로 끝나는 정직한 한 잔."}], "method": [{"text": "Glencairn 잔을 미리 준비. 깨끗이 말랐는지 확인 — 물 자국이 위스키 향을 죽 임.", "duration": "20초"}, {"text": "바켄슈타이거 지거로 25~30mL 측정. 정확하지 않아도 OK (눈대중도 가능).", "duration": ""}, {"text": "잔에 천천히 따름. 콸콸 따르지 말 것 — 알콜이 코를 자극.", "duration": "10초"}, {"text": "산펠레그리노를 옆 작은 잔에 따로 따라 체이서로.", "duration": "10초"}], "plating": [{"label": "잔", "value": "Glencairn 위스키 테이스팅"}, {"label": "양", "value": "25~30mL (지거 절반 정도)"}, {"label": "체이서", "value": "산펠레그리노 250mL 별도"}], "tastenote": "프렌치 오크에서 온 바닐라·꿀 노트가 첫 모금에 입을 감싸고, 살짝의 과 일 향이 코로 올라온다. 후미에 옅은 셰리 단맛. 너의 미니바 디폴트 — 5 년을 마셔도 질리지 않는 한 잔.", "hosttip": "Glencairn 잔은 위스키의 향을 모으는 모양. 락 글라스에 따르면 향이 흩어짐. 처 음엔 코를 잔 입구에서 5cm 위에 — 천천히 흡입. 알콜 향이 가시면 다시 더 깊이.", "pairing": ["하몬 파르미지아노 보드 · 위스키 안주 정석", "초콜릿 너트 플레이트 · 디저트 매칭", "관자 아부리 · 일식 메인과도 OK"]}, "21": {"no": "21", "title_ko": "발베니 온더락", "title_en": "Balvenie On The Rocks", "meta": {"난이도": "★ 매우 쉬움", "시간": "2분", "분량": "1잔", "조리": "비가열", "보관": "실온"}, "ingredients": [{"name": "발베니 14년", "qty": "40~50mL"}, {"name": "아이스올리 빅볼", "qty": "1개"}, {"name": "오렌지 껍질 트위스트", "qty": "1조각"}, {"note": "빅볼 얼음이 핵심. 작은 얼음 여러 개를 쓰면 빨리 녹아 묽 어짐. 큰 얼음 하나면 천천히 녹으며 향이 풀린다."}], "method": [{"text": "Riedel 락 글라스에 빅볼 얼음 하나를 넣음. 잔을 차갑게.", "duration": "20초"}, {"text": "발베니 14년 40~50mL를 얼음 위로 천천히 따름. 알콜이 잔 벽을 타고 흐르게.", "duration": ""}, {"text": "오렌지 껍질을 칼로 3×1cm 크기로 자름. 색깔 면이 바깥.", "duration": "30초"}, {"text": "Soto 토치로 껍질 색깔 면을 빠르게 1~2초 (선택). 향이 두 배.", "duration": "5초"}, {"text": "껍질을 양손으로 잡고 잔 위에서 비틀어 짠다. 오일이 잔 입구에 떨어짐.", "duration": "5초"}, {"text": "껍질을 잔에 넣거나 잔 가장자리에 살짝 걸침.", "duration": "5초"}], "plating": [{"label": "잔", "value": "Riedel 락 글라스"}, {"label": "얼음", "value": "빅볼 하나"}, {"label": "가니시", "value": "오렌지 트위스트"}], "tastenote": "위스키의 단맛이 얼음에 살짝 묽어지면서 부드러워지고, 오렌지 껍질 오 일이 코로 올라오며 향이 입체적으로 변한다. 니트와 하이볼 사이의 정직 한 중간.", "hosttip": "오렌지 껍질을 토치로 살짝 그을리면 향이 폭발한다. 손님 앞에서 토치 켜는 순간이 호텔 바텐더 톤. 이건 너의 핵심 무브.", "pairing": ["하몬 파르미지아노 보드 · 위스키 안주 정석", "초콜릿 너트 플레이트 · 디저트 매칭", "관자 아부리 · 일식 메인"]}, "22": {"no": "22", "title_ko": "글렌모렌지 시그넷", "title_en": "Glenmorangie Signet", "meta": {"난이도": "★ 매우 쉬움", "시간": "1분", "분량": "1~2잔", "조리": "비가열", "보관": "실온"}, "ingredients": [{"name": "Glenmorangie Signet", "qty": "25mL"}, {"name": "산펠레그리노", "qty": "체이서"}, {"name": "Glencairn 잔", "qty": "1~2개"}, {"note": "디저트 페어링 전용. Signet은 너의 가장 비싼 카드. 데일 리 음용은 발베니로. 이건 토치 디저트나 다크초콜릿과 만날 때만."}], "method": [{"text": "Glencairn 잔이 깨끗하게 말랐는지 확인.", "duration": "10초"}, {"text": "Signet을 25mL만 따름. 더 많으면 향이 둔해짐.", "duration": "20초"}, {"text": "산펠레그리노를 옆 작은 잔에 따로 따라 체이서로.", "duration": "10초"}, {"text": "디저트(토치 마시멜로 또는 다크초콜릿)와 함께 서빙.", "duration": "10초"}], "plating": [{"label": "잔", "value": "Glencairn"}, {"label": "양", "value": "25mL만"}, {"label": "체이서", "value": "산펠레그리노 별도"}], "tastenote": "초콜릿·로스티드 노트가 입을 감싸고, 살짝의 산미와 후미의 스파이스가 따라온다. 다른 위스키와 결이 완전히 다름. 디저트 페어링의 정점.", "hosttip": "Signet은 초콜릿 몰트로 만든 위스키. 카카오 노트가 디저트와 만나면 향이 두 배. 발베니와 톤이 완전 달라 — 같은 날 마시면 Signet이 둔하게 느껴짐. 마지막 카드 로 아껴쓸 것.", "pairing": ["토치 마시멜로 하트 꼬치 · 정석 매칭", "초콜릿 너트 플레이트 · 다크초콜릿", "카망베르 통토치 · 치즈 디저트"]}, "23": {"no": "23", "title_ko": "진저 하이볼", "title_en": "Ginger Highball", "meta": {"난이도": "★★ 쉬움", "시간": "3분", "분량": "2인 · 2잔", "조리": "비가열", "보관": "재료 상비"}, "ingredients": [{"name": "발베니 14년", "qty": "30mL ×2"}, {"name": "분다버그 진저비어 375mL", "qty": "1병"}, {"name": "레몬 슬라이스", "qty": "2조각"}, {"name": "얼음", "qty": "제빙기 가득"}, {"note": "웰컴의 '진저 위스키 하이볼'과 같지만 더 미니멀. 라임·민 트 없이 가는 데일리 버전."}], "method": [{"text": "Nachtmann 하이볼에 얼음 70%.", "duration": "30초"}, {"text": "바켄슈타이거 지거로 발베니 30mL씩.", "duration": "30초"}, {"text": "분다버그 진저비어를 잔 가장자리로 천천히 90%까지.", "duration": "1분"}, {"text": "레몬 휠 1조각씩 잔 안쪽에 끼움.", "duration": "20초"}, {"text": "바스푼으로 한 번만 가볍게.", "duration": "5초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼 ×2"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "레몬 휠만"}], "tastenote": "위스키의 단맛 + 진저비어의 매콤함 + 레몬의 산미. 가장 안전한 하이볼. 의자에 앉아서 30분 들이고 마실 음료.", "hosttip": "데일리 카드. 화려한 가니시 없이 속도와 일관성이 중요. 손님이 두 번째 잔을 원할 때 3분 안에 만들 수 있어야 한다.", "pairing": ["한식 안주 보드 · 정석", "모듬 야키토리 · 이자카야", "관자 아부리 · 일식"]}, "24": {"no": "24", "title_ko": "Asahi 슈퍼 드라이", "title_en": "Asahi Super Dry", "meta": {"난이도": "★ 매우 쉬움", "시간": "1분", "분량": "1잔", "조리": "비가열", "보관": "냉장"}, "ingredients": [{"name": "Asahi Super Dry 캔", "qty": "350~500mL"}, {"name": "인블룸 맥주잔 555mL", "qty": "1개"}, {"note": "맥주는 가니시 없음이 정직. 그냥 따르고 거품 1cm 유지 하는 게 전부."}], "method": [{"text": "인블룸 맥주잔을 냉장고에서 꺼냄 (사전 식혀둠).", "duration": "10초"}, {"text": "잔을 45도 기울여 잡고, 캔 입구를 잔 벽 중간에 댐.", "duration": "10초"}, {"text": "천천히 따름. 맥주가 잔 벽을 타고 흐르게.", "duration": "30초"}, {"text": "잔의 70%에 닿으면 잔을 똑바로 세워 마저 채움. 거품이 1cm 위로.", "duration": "20초"}, {"text": "바로 서빙. 거품이 가라앉기 전에.", "duration": "10초"}], "plating": [{"label": "잔", "value": "인블룸 555mL"}, {"label": "따르기", "value": "잔 기울여 거품 통제"}, {"label": "거품", "value": "최종 1cm 유지"}], "tastenote": "건조하고 깔끔한 맛. 단맛이 거의 없고 끝맛이 곧장 사라진다. 이자카야 톤의 정통. 야키토리·파닭·관자와 만나면 식욕을 깨운다.", "hosttip": "Asahi는 탄산이 강한 일본 라거. 따르는 속도가 결정 — 너무 빨리 거품 폭발, 너무 천천히 김 빠짐. 30초가 적정. 잔이 미리 차가워야 거품이 곱게 올라옴.", "pairing": ["모듬 야키토리 · 이자카야 정석", "파닭 꼬치 · 맥주 안주", "한식 안주 보드 · 전통"]}, "25": {"no": "25", "title_ko": "참이슬 fresh", "title_en": "Chamisul Fresh", "meta": {"난이도": "★ 매우 쉬움", "시간": "1분", "분량": "1~2명", "조리": "비가열", "보관": "실온/냉장"}, "ingredients": [{"name": "참이슬 fresh 360mL", "qty": "1병"}, {"name": "이플스토리 도자기 소주잔", "qty": "2~4개"}, {"note": "소주는 가니시 없음. 신선 안주가 가니시 역할."}], "method": [{"text": "참이슬 병을 미리 30분 냉장. 살짝 차가운 정도가 정통. 사전", "duration": ""}, {"text": "도자기 소주잔을 테이블에 정렬.", "duration": "10초"}, {"text": "병을 흔들지 말고 잔에 천천히 따름. 잔의 80%까지.", "duration": "20초"}, {"text": "(전통) 두 손으로 따르거나, 첫 잔은 호스트가 먼저 받음.", "duration": "10초"}], "plating": [{"label": "잔", "value": "이플스토리 도자기 ×2~4"}, {"label": "양", "value": "잔의 80%까지"}, {"label": "동반", "value": "안주 별도"}], "tastenote": "깔끔한 알콜 + 옅은 단맛. 빠르게 들어가고 빠르게 사라진다. 한식 안주의 영원한 동반. 친밀한 자리에서만 등장.", "hosttip": "참이슬은 너무 차갑게 식히지 말 것. 얼리면 향이 닫힘. 살짝 시원한 정도가 정통. 한식 안주(먹태·저키)와 만나면 끝이 없다.", "pairing": ["한식 안주 보드 · 정석", "파닭 꼬치 · 전통", "Asahi 맥주 · 소맥 변주"]}, "26": {"no": "26", "title_ko": "올드 패션드", "title_en": "Old Fashioned", "meta": {"난이도": "★★★ 보통", "시간": "5분", "분량": "1잔", "조리": "비가열", "보관": "재료 상비"}, "ingredients": [{"name": "발베니 14년", "qty": "50mL"}, {"name": "설탕 또는 각설탕", "qty": "1티스푼 또는 1개"}, {"name": "앙고스투라 비터스 (예정)", "qty": "2~3 dash"}, {"name": "오렌지 껍질", "qty": "1조각"}, {"name": "마라스키노 체리", "qty": "1개"}, {"name": "아이스올리 빅볼", "qty": "1개"}, {"note": "비터스가 핵심. 없으면 올드패션드가 아니라 그냥 위스키 + 설탕. 앙고스투라 비터스는 다음 구매 리스트."}], "method": [{"text": "락 글라스에 설탕 또는 각설탕 1개.", "duration": "10초"}, {"text": "비터스 2~3 dash를 설탕 위에. 설탕이 살짝 적실 정도.", "duration": "10초"}, {"text": "바스푼으로 설탕을 으깨면서 비터스에 녹임.", "duration": "30초"}, {"text": "발베니 14년 50mL를 따르고 바스푼으로 30회 저음. 설탕 완전히 녹을 때까지.", "duration": ""}, {"text": "빅볼 얼음을 넣음.", "duration": "10초"}, {"text": "오렌지 껍질을 잔 위에서 비틀어 짜 오일 떨어뜨림 → 토치로 그을림 → 잔에 넣 음.", "duration": "30초"}, {"text": "마라스키노 체리 1개를 얼음 위에.", "duration": "10초"}], "plating": [{"label": "잔", "value": "Riedel 락 글라스"}, {"label": "얼음", "value": "빅볼 하나"}, {"label": "가니시", "value": "오렌지 트위스트 + 체리"}], "tastenote": "위스키의 단맛이 설탕으로 강화되고, 비터스의 허브 향이 깊이를 더한다. 오렌지 오일이 코를 자극하고 체리가 마지막에 단맛. 모든 위스키 칵테일 의 시조.", "hosttip": "비터스 + 토치 오렌지 두 가지가 정통 올드패션드를 만든다. 비터스 없이 만들면 그 냥 위스키 + 설탕이 되니, 비터스부터 들이는 게 우선.", "pairing": ["하몬 파르미지아노 보드 · 정통", "초콜릿 너트 플레이트 · 디저트", "관자 아부리 · 일식 메인"]}, "27": {"no": "27", "title_ko": "위스키 사워", "title_en": "Whisky Sour", "meta": {"난이도": "★★★ 보통", "시간": "5분", "분량": "1잔", "조리": "셰이커", "보관": "재료 상비"}, "ingredients": [{"name": "발베니 14년", "qty": "60mL"}, {"name": "레몬즙 (생)", "qty": "30mL"}, {"name": "설탕시럽 (1:1)", "qty": "15mL"}, {"name": "계란 흰자 (선택)", "qty": "1/2개"}, {"name": "얼음", "qty": "셰이커 가득"}, {"name": "레몬 휠 + 체리", "qty": "가니시"}, {"note": "계란 흰자가 거품을 만든다. 비건이거나 부담스러우면 생 략 가능. 그래도 사워는 만들어짐."}], "method": [{"text": "레몬 1개를 짜서 30mL 즙. 코멧 스퀴저 사용.", "duration": "1분"}, {"text": "Yukiwa 셰이커에 위스키 60 + 레몬즙 30 + 설탕시럽 15 + 계란 흰자(선택).", "duration": ""}, {"text": "얼음 없이 먼저 30초 강하게 셰이크 (드라이 셰이크). 거품 형성.", "duration": "30초"}, {"text": "얼음을 가득 채우고 다시 15초 셰이크.", "duration": "30초"}, {"text": "락 글라스에 큰 얼음 1~2개 넣고 셰이커 내용물을 따름. 거품 위로 올라옴.", "duration": ""}, {"text": "레몬 휠을 잔 가장자리에 끼우고 체리 1개 얼음 위에.", "duration": "30초"}], "plating": [{"label": "잔", "value": "Riedel 락 또는 쿠페"}, {"label": "얼음", "value": "잔에 큰 얼음 1~2개"}, {"label": "거품", "value": "위쪽 1cm"}, {"label": "가니시", "value": "레몬 휠 + 체리"}], "tastenote": "위스키의 단맛 + 레몬의 산미 + 설탕의 균형 + 계란 흰자의 부드러운 거품 이 한 입에. 위스키 칵테일의 안전한 입문.", "hosttip": "드라이 셰이크(얼음 없이) 먼저가 핵심. 계란 흰자에서 단백질이 풀려야 거품 안정. 바로 얼음과 함께 셰이크하면 거품이 가벼움.", "pairing": ["카프레제 꼬치 · 가벼운 매칭", "크래커 셀렉션 · 치즈", "토치 마시멜로 · 단맛"]}, "28": {"no": "28", "title_ko": "에스프레소 마티니", "title_en": "Espresso Martini", "meta": {"난이도": "★★★ 보통", "시간": "5분", "분량": "1잔", "조리": "셰이커", "보관": "재료 상비"}, "ingredients": [{"name": "그레이구스 보드카 (예정)", "qty": "50mL"}, {"name": "Kahlúa 커피 리큐어 (예정)", "qty": "25mL"}, {"name": "정성 에스프레소 더블샷", "qty": "30mL (방금)"}, {"name": "설탕시럽", "qty": "10mL (선택)"}, {"name": "얼음", "qty": "셰이커 가득"}, {"name": "커피 원두", "qty": "3알 (가니시)"}, {"note": "에스프레소가 뜨거울 때 만들어야 거품(크레마)이 형성. 식은 에스프레소는 거품이 안 됨."}], "method": [{"text": "유레카 + 딜리코로 더블샷 에스프레소 추출. 30mL.", "duration": "1분"}, {"text": "Yukiwa 셰이커에 보드카 50 + Kahlúa 25 + 에스프레소 30 + 설탕시럽 10(선 택).", "duration": "30초"}, {"text": "얼음을 가득 채우고 강하게 15~20초 셰이크. 셰이커가 매우 차가워질 때까지.", "duration": ""}, {"text": "쿠페 잔에 strainer로 거름 (얼음 제거). 잔에 따를 때 거품이 위로 떠오름.", "duration": ""}, {"text": "커피 원두 3알을 거품 위에 트라이앵글 모양으로 띄움.", "duration": "20초"}], "plating": [{"label": "잔", "value": "Riedel 쿠페 또는 마티니"}, {"label": "거품", "value": "위쪽 크레마 1cm"}, {"label": "가니시", "value": "커피 원두 3알"}], "tastenote": "에스프레소의 쌉쌀함 + 보드카의 깔끔함 + Kahlúa의 단맛이 한 입에. 위 에 크레마 거품이 입술에 먼저 닿고 안에서 차가운 알콜이 따라온다. 식후 디저트 칵테일의 정점.", "hosttip": "커피 원두는 3알이 정통. 더 많으면 비주얼이 무거워짐. 셰이크는 강하고 짧게 — 거품 형성이 핵심.", "pairing": ["토치 마시멜로 하트 꼬치 · 디저트 정석", "초콜릿 너트 플레이트 · 다크초콜릿", "스모어 미니 · 캠핑 디저트"]}, "29": {"no": "29", "title_ko": "화이트 러시안", "title_en": "White Russian", "meta": {"난이도": "★★ 쉬움", "시간": "3분", "분량": "1잔", "조리": "레이어", "보관": "재료 상비"}, "ingredients": [{"name": "그레이구스 보드카 (예정)", "qty": "40mL"}, {"name": "Kahlúa 커피 리큐어 (예정)", "qty": "20mL"}, {"name": "Oatly Barista 또는 헤비크림", "qty": "20mL"}, {"name": "얼음", "qty": "큰 얼음 2~3개"}, {"name": "커피 가루 또는 다크초콜릿 가루", "qty": "약간"}, {"note": "레이어가 핵심 — 보드카+Kahlúa 다음에 크림을 천천히 부어야 흰색이 위에 뜸. 한 번에 따르면 갈색으로 섞임."}], "method": [{"text": "Riedel 락 글라스에 큰 얼음 2~3개.", "duration": "20초"}, {"text": "보드카 40mL + Kahlúa 20mL를 직접 잔에 따름. 얼음 위로.", "duration": "30초"}, {"text": "바스푼으로 가볍게 한 번 저음. 두 가지 알콜만 섞이게.", "duration": "10초"}, {"text": "Oatly 또는 크림 20mL를 바스푼 뒷면을 따라 천천히 따름. 흰색이 위에 뜸.", "duration": ""}, {"text": "커피 가루 또는 다크초콜릿을 위에 약간 흩뿌림.", "duration": "20초"}], "plating": [{"label": "잔", "value": "Riedel 락 글라스"}, {"label": "얼음", "value": "큰 얼음 2~3개"}, {"label": "레이어", "value": "하단 갈색 + 상단 흰색"}, {"label": "가니시", "value": "커피 또는 초콜릿 가루"}], "tastenote": "첫 모금은 크림의 부드러움, 두 번째 모금은 Kahlúa의 단맛, 세 번째는 보드카의 깔끔함. 저으면 카페오레 같은 부드러움. 겨울 밤의 디저트 칵테 일.", "hosttip": "크림을 바스푼 뒷면을 타고 흘리면 레이어가 완벽. 손님이 직접 저어서 색이 변하는 걸 보는 게 이 칵테일의 재미.", "pairing": ["초콜릿 너트 플레이트 · 다크초콜릿", "토치 마시멜로 · 디저트 정석", "스모어 미니 · 캠핑 디저트"]}, "30": {"no": "30", "title_ko": "진토닉", "title_en": "Gin & Tonic", "meta": {"난이도": "★★ 쉬움", "시간": "3분", "분량": "1~2잔", "조리": "빌드", "보관": "재료 상비"}, "ingredients": [{"name": "진 (Hendrick's 또는 Tanqueray, 예정)", "qty": "40~50mL"}, {"name": "피버트리 토닉 워터 200mL", "qty": "1병"}, {"name": "라임 슬라이스", "qty": "1조각"}, {"name": "로즈마리 또는 민트", "qty": "1가지"}, {"name": "얼음", "qty": "제빙기 가득"}, {"note": "진토닉의 가니시는 진 종류에 따라 달라짐. Hendrick's는 오이, Tanqueray는 라임+로즈마리, Bombay는 자몽."}], "method": [{"text": "Nachtmann 하이볼에 얼음을 가득. 80%까지.", "duration": "30초"}, {"text": "진 40~50mL를 얼음 위로 따름.", "duration": "20초"}, {"text": "피버트리 토닉을 잔 가장자리로 천천히. 잔의 90%까지. 탄산 보호.", "duration": "1분"}, {"text": "바스푼으로 위에서 아래로 1~2번만 가볍게.", "duration": "10초"}, {"text": "라임 슬라이스를 얼음 사이로 끼움.", "duration": "10초"}, {"text": "로즈마리 또는 민트를 손바닥으로 가볍게 쳐서 잔 입구에.", "duration": "10초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "라임 + 로즈마리/민트"}], "tastenote": "진의 보태니컬 향(주니퍼, 시트러스) + 토닉의 쌉쌀한 단맛 + 라임의 산미 + 로즈마리의 허브가 한 잔에. 여름의 정직한 칵테일.", "hosttip": "토닉을 저어 너무 섞지 말 것. 진과 토닉이 미세하게 분리된 상태에서 한 모금씩 변 하는 맛이 정통.", "pairing": ["카프레제 꼬치 · 허브 매칭", "프로슈토 부라타 · 이탈리아", "연어 타다키 · 일식 + 진"]}, "31": {"no": "31", "title_ko": "김렛", "title_en": "Gimlet", "meta": {"난이도": "★★ 쉬움", "시간": "3분", "분량": "1잔", "조리": "셰이커", "보관": "재료 상비"}, "ingredients": [{"name": "진 (예정)", "qty": "60mL"}, {"name": "라임즙 (생)", "qty": "15mL"}, {"name": "설탕시럽 (1:1)", "qty": "10mL"}, {"name": "얼음", "qty": "셰이커 가득"}, {"name": "라임 휠", "qty": "가니시"}, {"note": "가장 미니멀한 진 칵테일. 재료 3가지로 끝. 진의 맛을 즐 기기에 가장 좋음."}], "method": [{"text": "코멧 스퀴저로 라임 1개 짜서 15mL.", "duration": "30초"}, {"text": "Yukiwa 셰이커에 진 60 + 라임즙 15 + 설탕시럽 10.", "duration": "20초"}, {"text": "얼음을 가득 채우고 15초 셰이크.", "duration": "20초"}, {"text": "쿠페 잔에 strainer로 거름. 얼음 안 들어가게.", "duration": "20초"}, {"text": "라임 휠을 잔 가장자리에.", "duration": "10초"}], "plating": [{"label": "잔", "value": "Riedel 쿠페"}, {"label": "따르기", "value": "스트레인 (얼음 제거)"}, {"label": "가니시", "value": "라임 휠"}], "tastenote": "진의 보태니컬이 라임 산미와 정직하게 만난다. 단맛은 거의 없고, 깔끔한 끝맛. 마티니와 진토닉 사이의 정직한 중간.", "hosttip": "설탕시럽 비율이 결정. 너무 달면 진의 향이 죽고, 너무 적으면 라임 산미가 도드라 짐. 10mL가 정통.", "pairing": ["카프레제 꼬치 · 허브 매칭", "연어 타다키 · 일식 + 진", "프로슈토 부라타 · 이탈리아"]}, "32": {"no": "32", "title_ko": "모스코 뮬", "title_en": "Moscow Mule", "meta": {"난이도": "★★ 쉬움", "시간": "3분", "분량": "1잔", "조리": "빌드", "보관": "재료 상비"}, "ingredients": [{"name": "그레이구스 보드카 (예정)", "qty": "50mL"}, {"name": "분다버그 진저비어", "qty": "120mL"}, {"name": "라임즙 (생)", "qty": "15mL"}, {"name": "얼음", "qty": "구리잔 가득"}, {"name": "라임 휠 + 민트", "qty": "가니시"}, {"note": "구리잔이 정통. 없으면 Nachtmann 하이볼로 대체 가능 하지만, 구리잔은 알콜을 더 차갑게 유지."}], "method": [{"text": "구리잔에 얼음을 가득. 잔이 차가워질 때까지 5초.", "duration": "20초"}, {"text": "보드카 50mL + 라임즙 15mL를 잔에 따름.", "duration": "20초"}, {"text": "분다버그 진저비어를 잔 가장자리로 천천히. 잔의 90%까지.", "duration": "1분"}, {"text": "바스푼으로 한 번만 가볍게.", "duration": "5초"}, {"text": "라임 휠을 잔 가장자리에. 민트를 손바닥으로 가볍게 쳐서 위에.", "duration": "20초"}], "plating": [{"label": "잔", "value": "구리잔 (또는 Nachtmann)"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "라임 휠 + 민트 슬랩"}], "tastenote": "보드카의 깔끔함 + 진저비어의 매콤함 + 라임의 산미. 차가움이 더해져 청량감 극대화. 여름 정직한 칵테일.", "hosttip": "구리잔의 차가움 유지력이 핵심. 처음 한 모금에 잔이 손에서 차갑게 닿는 게 모스 코 뮬의 정직한 시그니처.", "pairing": ["한식 안주 보드 · 매콤 매칭", "연어 타다키 · 사시미", "모듬 야키토리 · 이자카야"]}, "33": {"no": "33", "title_ko": "블러디 메리", "title_en": "Bloody Mary", "meta": {"난이도": "★★★ 보통", "시간": "5분", "분량": "1잔", "조리": "빌드", "보관": "재료 상비"}, "ingredients": [{"name": "그레이구스 보드카 (예정)", "qty": "45mL"}, {"name": "토마토 주스", "qty": "120mL"}, {"name": "우스터 소스", "qty": "5mL"}, {"name": "타바스코", "qty": "2~3 dash"}, {"name": "레몬즙", "qty": "10mL"}, {"name": "소금·후추", "qty": "약간"}, {"name": "셀러리 + 레몬", "qty": "가니시"}, {"note": "아침 칵테일의 대명사. 알콜 무게에도 토마토와 향신료로 깨끗한 맛. 숙취 해소용으로도 정통."}], "method": [{"text": "Nachtmann 하이볼에 얼음을 70%까지.", "duration": "20초"}, {"text": "보드카 45 + 토마토 주스 120 + 우스터 5 + 타바스코 2~3 dash + 레몬즙 10.", "duration": ""}, {"text": "소금·후추를 한 자밤씩.", "duration": "20초"}, {"text": "바스푼으로 위에서 아래로 5~6회 부드럽게 저음.", "duration": "30초"}, {"text": "셀러리 스틱을 잔에 꽂음 (스푼 역할 + 가니시).", "duration": "20초"}, {"text": "레몬 휠을 잔 가장자리에.", "duration": "10초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "셀러리 스틱 + 레몬 휠"}], "tastenote": "토마토의 진한 단맛 + 보드카의 깔끔함 + 우스터·타바스코의 향신료가 한 입에. 셀러리의 청량감이 마지막을 정리. 브런치 칵테일의 정점.", "hosttip": "셀러리는 가니시이자 도구. 손님이 직접 휘저으면서 향이 두 배. 타바스코는 손님 취향에 맞춰 조절.", "pairing": ["한식 안주 보드 · 매콤", "프로슈토 부라타 · 토마토", "카프레제 꼬치 · 토마토 듀오"]}, "34": {"no": "34", "title_ko": "시드립 토닉", "title_en": "Seedlip & Tonic", "meta": {"난이도": "★ 매우 쉬움", "시간": "2분", "분량": "1~2잔", "조리": "빌드", "보관": "실온"}, "ingredients": [{"name": "Seedlip Spice 94", "qty": "50mL"}, {"name": "피버트리 토닉 200mL", "qty": "1병"}, {"name": "라임 슬라이스", "qty": "1조각"}, {"name": "로즈마리 가지", "qty": "1개"}, {"name": "얼음", "qty": "제빙기 가득"}, {"note": "알콜 0%이지만 진토닉의 향과 깊이가 살아있음. 손님이 술 못 마실 때 가장 안전한 카드."}], "method": [{"text": "Nachtmann 하이볼에 얼음을 가득.", "duration": "20초"}, {"text": "Seedlip Spice 94를 50mL 따름.", "duration": "20초"}, {"text": "피버트리 토닉을 잔 가장자리로 천천히. 잔의 90%까지.", "duration": "1분"}, {"text": "바스푼으로 가볍게 1~2번.", "duration": "10초"}, {"text": "라임 슬라이스를 얼음 사이로. 로즈마리를 손바닥으로 가볍게 쳐서 잔 입구에.", "duration": ""}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "라임 + 로즈마리"}], "tastenote": "올스파이스·카르다몸·자몽의 향이 보태니컬을 흉내내고, 토닉의 쌉쌀한 단맛이 그것을 받쳐준다. 알콜 없는 칵테일의 정점.", "hosttip": "Seedlip은 일반 진과 톤이 다르다. 알콜이 없으니 향이 빨리 휘발 — 만든 직후 5분 안에 마시는 게 정통.", "pairing": ["프로슈토 부라타 · 이탈리아", "카프레제 꼬치 · 허브 매칭", "관자 아부리 · 일식 메인"]}, "35": {"no": "35", "title_ko": "버진 진저 뮬", "title_en": "Virgin Ginger Mule", "meta": {"난이도": "★ 매우 쉬움", "시간": "3분", "분량": "1~2잔", "조리": "빌드", "보관": "재료 상비"}, "ingredients": [{"name": "Seedlip Spice 94 (선택)", "qty": "30mL"}, {"name": "분다버그 진저비어", "qty": "150mL"}, {"name": "라임즙 (생)", "qty": "15mL"}, {"name": "얼음", "qty": "잔 가득"}, {"name": "라임 휠 + 민트", "qty": "가니시"}, {"note": "모스코 뮬의 비알콜 버전. Seedlip 더하면 깊이 살고, 빼 면 가벼움."}], "method": [{"text": "Nachtmann 하이볼에 얼음 가득.", "duration": "20초"}, {"text": "Seedlip 30(선택) + 라임즙 15를 따름.", "duration": "20초"}, {"text": "분다버그 진저비어를 잔 가장자리로 천천히. 잔의 90%까지.", "duration": "1분"}, {"text": "바스푼으로 한 번만 가볍게.", "duration": "5초"}, {"text": "라임 휠을 끼우고 민트를 손바닥으로 가볍게 쳐서 잔 입구에.", "duration": "20초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "라임 + 민트"}], "tastenote": "진저의 매콤함 + 라임의 산미 + 민트의 청량감이 한 잔에. 알콜 없이도 자 극이 살아있음. 비알콜 모스코 뮬.", "hosttip": "Seedlip 없이도 충분히 작동. 분다버그 진저비어의 매콤함이 알콜 없는 깊이를 만 든다. 손님이 임신 중이거나 운전이면 이걸로.", "pairing": ["한식 안주 보드 · 매콤", "모듬 야키토리 · 이자카야", "관자 아부리 · 일식 메인"]}, "36": {"no": "36", "title_ko": "버진 블러디", "title_en": "Virgin Bloody", "meta": {"난이도": "★★ 쉬움", "시간": "4분", "분량": "1잔", "조리": "빌드", "보관": "재료 상비"}, "ingredients": [{"name": "토마토 주스", "qty": "150mL"}, {"name": "우스터 소스", "qty": "5mL"}, {"name": "타바스코", "qty": "2 dash"}, {"name": "레몬즙", "qty": "15mL"}, {"name": "소금·후추", "qty": "약간"}, {"name": "셀러리 + 레몬", "qty": "가니시"}, {"note": "블러디 메리의 비알콜 버전. 보드카 없이도 향신료가 깊이 를 만든다."}], "method": [{"text": "Nachtmann 하이볼에 얼음을 70%까지.", "duration": "20초"}, {"text": "토마토 주스 150 + 우스터 5 + 타바스코 2 dash + 레몬즙 15를 따름.", "duration": "1분"}, {"text": "소금·후추 한 자밤씩.", "duration": "20초"}, {"text": "바스푼으로 5~6회 부드럽게 저음.", "duration": "30초"}, {"text": "셀러리 스틱을 잔에 꽂고 레몬 휠을 가장자리에.", "duration": "30초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "셀러리 스틱 + 레몬 휠"}], "tastenote": "토마토의 진함 + 향신료의 매콤함 + 셀러리의 청량감. 알콜 없는 자극이 깨끗하다. 비알콜 브런치 카드.", "hosttip": "아침 음료로도 정직. 자고 일어난 손님에게 한 잔. 알콜 없이도 향신료 자극이 입을 깨운다.", "pairing": ["계절 과일 트레이 · 아침 모드", "프로슈토 부라타 · 토마토", "크래커 셀렉션 · 가벼움"]}, "37": {"no": "37", "title_ko": "진저 시트러스", "title_en": "Ginger Citrus", "meta": {"난이도": "★ 매우 쉬움", "시간": "3분", "분량": "1~2잔", "조리": "빌드", "보관": "재료 상비"}, "ingredients": [{"name": "분다버그 진저비어", "qty": "200mL"}, {"name": "레몬즙 (생)", "qty": "15mL"}, {"name": "라임즙 (생)", "qty": "10mL"}, {"name": "스피아민트", "qty": "잎 3~4장"}, {"name": "얼음", "qty": "잔 가득"}, {"note": "가장 정직한 비알콜 시트러스 카드. 알콜 없는 진저 위스 키 하이볼 같은 느낌."}], "method": [{"text": "Nachtmann 하이볼에 얼음 가득.", "duration": "20초"}, {"text": "레몬즙 15 + 라임즙 10을 따름.", "duration": "20초"}, {"text": "분다버그 진저비어를 잔 가장자리로 천천히. 잔의 90%까지.", "duration": "1분"}, {"text": "바스푼으로 한 번만 가볍게.", "duration": "5초"}, {"text": "레몬·라임 슬라이스 각 1장 + 민트 잎을 손바닥으로 가볍게 쳐서 위에.", "duration": "30초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "레몬·라임 + 민트"}], "tastenote": "진저의 매콤함 + 시트러스의 산미 + 민트의 청량감. 비알콜인데도 자극이 살아있음. 호스트의 디폴트 비알콜.", "hosttip": "Seedlip이 부족하면 이걸로 대체. 가장 빠른 비알콜 카드. 만들기 쉽고 모두 좋아 함.", "pairing": ["한식 안주 보드 · 매콤", "관자 아부리 · 일식", "모듬 야키토리 · 이자카야"]}, "38": {"no": "38", "title_ko": "레모네이드 스파클", "title_en": "Sparkling Lemonade", "meta": {"난이도": "★ 매우 쉬움", "시간": "3분", "분량": "1~2잔", "조리": "빌드", "보관": "재료 상비"}, "ingredients": [{"name": "레몬즙 (생)", "qty": "30mL"}, {"name": "아카시아 꿀", "qty": "1~2큰술"}, {"name": "산펠레그리노 250mL", "qty": "1캔"}, {"name": "스피아민트", "qty": "잎 3~4장"}, {"name": "얼음", "qty": "잔 가득"}, {"note": "설탕 대신 아카시아 꿀로 단맛. 호텔 룸서비스의 비알콜 정통."}], "method": [{"text": "레몬 1~2개를 짜서 30mL 즙. 코멧 스퀴저 사용.", "duration": "1분"}, {"text": "작은 볼에 레몬즙 + 꿀 1~2큰술을 섞음. 꿀이 완전히 녹을 때까지.", "duration": "30초"}, {"text": "Nachtmann 하이볼에 얼음 가득. 꿀-레몬 시럽을 잔에 부음.", "duration": "30초"}, {"text": "산펠레그리노를 잔 가장자리로 천천히. 잔의 90%까지. 탄산 보호.", "duration": "30초"}, {"text": "바스푼으로 한 번만 가볍게. 레몬 휠 1장 + 민트 잎을 위에.", "duration": "20초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "레몬 휠 + 민트"}], "tastenote": "레몬의 깔끔한 산미 + 꿀의 부드러운 단맛 + 탄산의 청량감이 한 입에. 호 텔 객실 아침 음료의 정통.", "hosttip": "꿀은 먼저 레몬즙에 녹여야 한다. 잔에 직접 넣으면 바닥에 가라앉음. 손님이 미리 꿀-레몬 비율을 확인하게 하면 더 좋음.", "pairing": ["계절 과일 트레이 · 아침 정석", "카프레제 꼬치 · 이탈리아", "크래커 셀렉션 · 가벼움"]}, "39": {"no": "39", "title_ko": "버진 모히토", "title_en": "Virgin Mojito", "meta": {"난이도": "★★ 쉬움", "시간": "5분", "분량": "1잔", "조리": "머들", "보관": "재료 상비"}, "ingredients": [{"name": "스피아민트 잎", "qty": "10~12장"}, {"name": "라임 1개 (조각)", "qty": "8조각"}, {"name": "설탕 또는 꿀", "qty": "2티스푼"}, {"name": "산펠레그리노", "qty": "150mL"}, {"name": "얼음", "qty": "잔 가득"}, {"note": "머들링이 핵심. 민트와 라임을 머들러로 으깨야 향이 폭 발. 바스푼 뒷면으로 대체 가능."}], "method": [{"text": "Nachtmann 하이볼에 라임 조각 8개 + 민트 잎 10장 + 설탕을 넣음.", "duration": "30초"}, {"text": "바스푼 뒷면으로 라임과 민트를 머들. 으깨는 게 아니라 살짝 비비는 느낌.", "duration": ""}, {"text": "얼음을 가득 채움.", "duration": "20초"}, {"text": "산펠레그리노를 잔 가장자리로 천천히 따름. 잔의 90%까지.", "duration": "1분"}, {"text": "바스푼으로 위에서 아래로 1~2회 가볍게.", "duration": "10초"}, {"text": "민트 가지를 손바닥으로 가볍게 쳐서 잔 위에. 라임 휠 1장 가장자리에.", "duration": "30초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "가니시", "value": "민트 가지 + 라임 휠"}], "tastenote": "민트의 향이 폭발하고 라임의 산미가 따라온다. 설탕의 단맛이 마무리. 알 콜 없이도 자극이 살아있는 여름 비알콜 카드.", "hosttip": "민트를 너무 으깨면 쓴맛이 나옴. 살짝 비비는 정도가 정통. 잎이 부서지면 안 됨.", "pairing": ["프로슈토 부라타 · 이탈리아", "계절 과일 트레이 · 여름", "카프레제 꼬치 · 허브 매칭"]}, "40": {"no": "40", "title_ko": "정성 에스프레소", "title_en": "Hand-Crafted Espresso", "meta": {"난이도": "★★★ 보통", "시간": "5분", "분량": "1~2잔", "조리": "에스프레소 머신", "보관": "원두 상비"}, "ingredients": [{"name": "스타벅스 에스프레소 로스트 원두", "qty": "18~20g (잔당)"}, {"name": "필터 정수", "qty": "30~40mL 추출"}, {"name": "호레카 에스프레소 샷잔", "qty": "1~2개"}, {"note": "너의 바리스타 자격증이 살아나는 카드. 유레카 + 딜리코 풀스택 활용. 18g 분쇄 → 균일화 → 탬핑 → 추출."}], "method": [{"text": "유레카 미뇽 스페셜리타에 원두 18~20g 분쇄. 그라인더 약 6초.", "duration": "30초"}, {"text": "바스켓에 분쇄 원두를 받고 칼딘 디스트리뷰터로 평탄화.", "duration": "30초"}, {"text": "칼딘 탬퍼로 탬핑. 15~20kg 압력. 평평하게.", "duration": "20초"}, {"text": "딜리코 3605PWM V2에 포타필터 장착. 추출 시작.", "duration": "10초"}, {"text": "브루오 저울로 추출 중량 측정. 30~40mL (25~28초 추출 시간이 적정).", "duration": "30초"}, {"text": "호레카 샷잔에 옮김. 크레마가 1cm 위에 떠 있어야 정통.", "duration": "10초"}], "plating": [{"label": "잔", "value": "호레카 에스프레소 샷잔"}, {"label": "추출", "value": "30~40mL 더블샷"}, {"label": "크레마", "value": "위쪽 갈색 거품 1cm"}], "tastenote": "다크초콜릿·캐러멜 노트가 입을 감싸고, 옅은 산미가 코로 올라온다. 크레 마가 입술에 먼저 닿고 안에서 진한 액체가 따라옴. 홈바리스타의 정점.", "hosttip": "추출 시간이 25초 미만이면 분쇄도가 너무 거침 (조이기), 30초 초과면 너무 곱음 (풀기). 매일 원두 컨디션에 따라 조정.", "pairing": ["초콜릿 너트 플레이트 · 디저트 정석", "토치 마시멜로 하트 꼬치 · 단맛 정리", "아포가토 · 더블샷 변주"]}, "41": {"no": "41", "title_ko": "오트 라떼", "title_en": "Oat Latte", "meta": {"난이도": "★★★ 보통", "시간": "5분", "분량": "1~2잔", "조리": "에스프레소 + 스팀", "보관": "원두·오틀리 상비"}, "ingredients": [{"name": "스타벅스 에스프레소 로스트 원두", "qty": "18~20g (잔당)"}, {"name": "Oatly Barista", "qty": "180mL (잔당)"}, {"name": "호레카 라떼 머그 또는 그라스", "qty": "1~2개"}, {"note": "Oatly Barista는 일반 오트밀크와 다름. 스팀해도 잘 무 너지지 않게 설계됨. 다른 오트밀크 안 됨."}], "method": [{"text": "정성 에스프레소(40번) 그대로 추출. 30~40mL.", "duration": "1분"}, {"text": "Oatly Barista 180mL를 스팀피처에 부음.", "duration": "20초"}, {"text": "딜리코의 스팀완드로 스팀. 피처 바닥부터 회전시키면서 60°C 도달까지. 마이크 로폼 형성.", "duration": "1분"}, {"text": "스팀이 끝나면 피처를 톡톡 쳐서 큰 거품 제거. 빙글 돌려 매끈한 상태.", "duration": "20초"}, {"text": "머그에 에스프레소 위에 우유를 부음. 잔 가장자리에서 천천히 → 위로 올라오면 중앙으로.", "duration": "1분"}, {"text": "(선택) 라떼아트 — 잎 또는 하트. 너의 바리스타 자격증을 보여줌.", "duration": "30초"}], "plating": [{"label": "잔", "value": "라떼 머그 또는 라떼 잔"}, {"label": "커피", "value": "더블샷 30~40mL"}, {"label": "스팀우유", "value": "180mL 60°C"}, {"label": "아트", "value": "잎 또는 하트"}], "tastenote": "Oatly의 단맛 + 에스프레소의 쌉쌀함이 정확히 만난다. 우유보다 가볍고 두유보다 부드러움. 비건 라떼의 정점. 식후 디저트에도 OK.", "hosttip": "스팀할 때 완드 끝을 우유 표면 1cm 아래로 — 너무 깊으면 거품 안 생기고, 너무 위면 큰 거품. '치' 소리가 들리면 정확.", "pairing": ["계절 과일 트레이 · 아침 정석", "초콜릿 너트 플레이트 · 디저트", "스모어 미니 · 단맛 매칭"]}, "42": {"no": "42", "title_ko": "아포가토", "title_en": "Affogato", "meta": {"난이도": "★★ 쉬움", "시간": "3분", "분량": "1~2인", "조리": "에스프레소 + 아이스크림", "보관": "원두·아이스크림"}, "ingredients": [{"name": "바닐라 아이스크림", "qty": "2스쿱 (90g)"}, {"name": "정성 에스프레소 더블샷", "qty": "30~40mL (방금)"}, {"name": "피스타치오 스프레드", "qty": "1줄 (가니시)"}, {"name": "호두 가루 또는 견과", "qty": "한 줌 (선택)"}, {"note": "이탈리아어 'affogato' = '익사한'. 에스프레소가 아이스크 림을 익사시키는 컨셉. 식후 디저트의 정점."}], "method": [{"text": "바닐라 아이스크림 2스쿱을 보울에 정렬. 둥글게 모양 유지.", "duration": "30초"}, {"text": "정성 에스프레소(40번) 더블샷 30~40mL를 작은 피처 또는 샷잔에 담음.", "duration": "1분"}, {"text": "(선택) 피스타치오 스프레드를 아이스크림 위에 한 줄로 두름.", "duration": "20초"}, {"text": "(선택) 호두 가루나 잘게 부순 견과를 위에 살짝.", "duration": "20초"}, {"text": "손님 앞에서 에스프레소를 아이스크림 위에 천천히 부음. 녹기 시작하는 순간 서 빙.", "duration": "30초"}], "plating": [{"label": "그릇", "value": "보울보울 디저트 또는 작은 화이트 보울"}, {"label": "아이스크림", "value": "2스쿱 정렬"}, {"label": "에스프레소", "value": "손님 앞에서 직접 부음"}, {"label": "토핑", "value": "피스타치오 스프레드"}], "tastenote": "차가운 바닐라 + 뜨거운 에스프레소의 온도 대비 + 단맛 + 쌉쌀함이 동시 에. 아이스크림이 살짝 녹으면서 카라멜 같은 상태로 변함. 이탈리아 디저 트의 정점.", "hosttip": "에스프레소를 손님 앞에서 직접 붓는 게 핵심 장면. 아이스크림이 녹기 시작하면 바 로 먹어야 함 — 시간이 가니시.", "pairing": ["발베니 14년 · 위스키 + 아이스크림", "Glenmorangie Signet · 디저트 페어링", "토치 마시멜로 · 단맛 듀오"]}, "43": {"no": "43", "title_ko": "네스프레소 아메리카노", "title_en": "Nespresso Americano", "meta": {"난이도": "★ 매우 쉬움", "시간": "2분", "분량": "1~2잔", "조리": "네스프레소", "보관": "캡슐 상비"}, "ingredients": [{"name": "네스프레소 버츄오 캡슐", "qty": "1개 (잔당)"}, {"name": "필터 정수", "qty": "150~200mL"}, {"name": "머그", "qty": "1~2개"}, {"note": "아침 데일리 카드. 정성 에스프레소(40번)은 손이 많이 가 니, 아침엔 이걸로. 손님이 자고 일어났을 때 가장 빠른 답."}], "method": [{"text": "머그를 머신 아래에 놓고 캡슐을 장착.", "duration": "20초"}, {"text": "버튼을 한 번 누름. 자동 추출 (캡슐별 양이 정해져 있음).", "duration": "40초"}, {"text": "(선택) 정수 100~150mL를 더해 아메리카노 완성. 또는 그대로 마심.", "duration": "20초"}, {"text": "(선택) Oatly 스팀해서 라떼로 변주.", "duration": "1분"}], "plating": [{"label": "잔", "value": "큰 머그 (300~400mL)"}, {"label": "추출", "value": "버츄오 캡슐 그대로"}, {"label": "스팀 우유 (선택)", "value": "라떼로 변주 가능"}], "tastenote": "캡슐 머신이지만 의외로 정직한 한 잔. 크레마도 살아있고, 단독 음용이나 라떼·아메리카노 다 가능. 호스트가 손이 안 가는 날의 정답.", "hosttip": "버츄오 캡슐은 종류가 많음 — Mocaccino 같은 가향, Espresso 같은 강도. 5종 정도 상비하면 손님 취향에 맞춰줄 수 있음.", "pairing": ["계절 과일 트레이 · 아침 정석", "크래커 셀렉션 · 가벼움", "초콜릿 너트 · 데일리"]}, "44": {"no": "44", "title_ko": "루왁 세션", "title_en": "Kopi Luwak Session", "meta": {"난이도": "★★★ 보통", "시간": "8분", "분량": "1~2잔", "조리": "핸드드립", "보관": "원두 미개봉 상비"}, "ingredients": [{"name": "루왁 원두", "qty": "20g (잔당)"}, {"name": "필터 정수 90°C", "qty": "200mL (잔당)"}, {"name": "V60 또는 칼리타 드리퍼 (예정)", "qty": "1개"}, {"name": "종이 필터", "qty": "1개"}, {"name": "서버 또는 작은 잔", "qty": "1~2개"}, {"note": "너의 가장 비싼 원두. 미개봉 상태로 보관 중. 특별한 날만 — 손님이 미식 호기심이 많고 위계가 형성된 자리에서."}], "method": [{"text": "루왁 원두 20g을 드리퍼에 준비된 종이 필터에 넣음.", "duration": "1분"}, {"text": "필터 정수를 90°C로 가열. 너무 뜨거우면 쓴맛.", "duration": "2분"}, {"text": "뜸 들이기 — 30g의 물을 원두에 둘러 붓고 30초 대기.", "duration": "1분"}, {"text": "천천히 원을 그리며 물을 부음. 중앙 → 가장자리. 200mL 분량.", "duration": "3분"}, {"text": "드리퍼를 제거하고 서버를 살짝 회전. 향이 골고루.", "duration": "30초"}, {"text": "작은 도자기 잔에 따라 서빙. 첫 모금은 향만.", "duration": "20초"}], "plating": [{"label": "드리퍼", "value": "V60 또는 칼리타 (예정)"}, {"label": "서버", "value": "유리 서버"}, {"label": "잔", "value": "작은 도자기 또는 핸드드립 잔"}], "tastenote": "일반 원두에 없는 부드러운 단맛 + 흙 같은 깊이 + 옅은 쓴맛. 호불호 갈리 지만 경험해볼 가치가 있는 한 잔. 호스트의 큐레이션을 보여주는 카드.", "hosttip": "루왁은 설명이 절반. '인도네시아 사향고양이가 소화한 원두'라는 스토리부터 시작 해서, 향의 특이함을 설명. 손님이 한 모금 마시고 '오?' 하는 순간 성공.", "pairing": ["초콜릿 너트 플레이트 · 단독 음용", "토치 마시멜로 · 디저트", "발베니 + 다크초콜릿 · 디저트 풀코스"]}, "45": {"no": "45", "title_ko": "카페 코레토", "title_en": "Caffè Corretto", "meta": {"난이도": "★★ 쉬움", "시간": "3분", "분량": "1잔", "조리": "에스프레소 + 알콜", "보관": "원두·발베니"}, "ingredients": [{"name": "정성 에스프레소 더블샷", "qty": "30mL"}, {"name": "발베니 14년 (또는 Sambuca, Grappa)", "qty": "10~15mL"}, {"name": "호레카 에스프레소 샷잔", "qty": "1개"}, {"note": "이탈리아어 'corretto' = '교정된'. 에스프레소에 알콜을 한 방울 더해 교정한다는 컨셉. 식후 음료의 정통."}], "method": [{"text": "정성 에스프레소(40번) 더블샷을 호레카 샷잔에 추출.", "duration": "1분"}, {"text": "발베니 14년 10~15mL를 따로 측정.", "duration": "30초"}, {"text": "에스프레소가 식기 전에 위스키를 위에 천천히 부음. 살짝 섞이면서 향이 폭발.", "duration": ""}, {"text": "바로 서빙. 따뜻한 상태가 정통.", "duration": "10초"}], "plating": [{"label": "잔", "value": "호레카 에스프레소 샷잔"}, {"label": "커피", "value": "더블샷 30mL"}, {"label": "알콜", "value": "위에 10~15mL"}], "tastenote": "에스프레소의 진한 쌉쌀함 + 위스키의 단맛이 한 잔에. 따뜻함이 알콜 향 을 더 강하게 만들어 코를 자극한다. 식후 음료의 정통.", "hosttip": "이탈리아 정통은 Sambuca 또는 Grappa. 너의 인벤토리에선 발베니로 변주. 위 스키의 바닐라 + 에스프레소의 쌉쌀함이 의외로 잘 어울림.", "pairing": ["초콜릿 너트 플레이트 · 단맛 매칭", "발베니 + 다크초콜릿 · 위스키 듀오", "토치 마시멜로 · 디저트"]}, "46": {"no": "46", "title_ko": "새우 칵테일", "title_en": "Shrimp Cocktail", "meta": {"난이도": "★★ 쉬움", "시간": "8분", "분량": "2인 · 5~6마리", "조리": "비가열 (자숙)", "보관": "냉동 새우 상비"}, "ingredients": [{"name": "자숙 새우 (대형)", "qty": "10~12마리"}, {"name": "토마토 케첩", "qty": "60mL"}, {"name": "호스래디시 (선택)", "qty": "1티스푼"}, {"name": "우스터 소스", "qty": "2 dash"}, {"name": "레몬즙", "qty": "10mL"}, {"name": "타바스코", "qty": "1 dash"}, {"name": "레몬 쐐기 + 파슬리", "qty": "가니시"}, {"note": "호텔 룸서비스의 정직한 콜드 시푸드. 자숙 새우 냉동 상 비. 칵테일 잔에 둘러서 내면 클래식 톤."}], "method": [{"text": "냉동 자숙 새우를 비닐 봉지째 찬물에 5분 해동.", "duration": "5분"}, {"text": "키친타올로 물기 제거. 꼬리는 남기고 껍질은 제거.", "duration": "1분"}, {"text": "작은 볼에 케첩 60 + 호스래디시 1티스푼 + 우스터 2 + 레몬즙 10 + 타바스코 1 을 섞음.", "duration": "1분"}, {"text": "쿠페 잔 바닥에 칵테일 소스를 1/3 정도 부음.", "duration": "30초"}, {"text": "새우 5~6마리를 잔 가장자리에 꼬리가 바깥으로 향하게 둘러 끼움.", "duration": "1분"}, {"text": "레몬 쐐기 1개를 잔 가장자리에 끼우고 파슬리 한 가지를 위에.", "duration": "30초"}], "plating": [{"label": "잔", "value": "Riedel 쿠페 또는 작은 마티니 잔"}, {"label": "소스", "value": "잔 안에 칵테일 소스"}, {"label": "새우", "value": "잔 가장자리에 5~6마리 둘러"}, {"label": "가니시", "value": "레몬 쐐기 + 파슬리"}], "tastenote": "차가운 새우의 단맛 + 칵테일 소스의 산미·매콤함이 한 입에. 레몬을 짜면 산미가 더 정리. 호텔 시푸드 정통. 화이트 와인과 만나면 완벽.", "hosttip": "꼬리가 바깥으로 향하게 거는 게 정통 비주얼. 손님이 한 마리씩 집어 소스에 찍어 먹는 동작이 우아함. 호스래디시 없으면 머스타드 한 방울로 대체.", "pairing": ["모엣 미니 · 샴페인 정석", "화이트 와인 · 쇼비뇽 블랑", "진토닉 (예정) · 가벼움"]}, "47": {"no": "47", "title_ko": "모차렐라 토치 카프레제", "title_en": "Mozzarella Aburi Caprese", "meta": {"난이도": "★★ 쉬움", "시간": "6분", "분량": "2~3인 · 1접시", "조리": "토치", "보관": "모차렐라 냉장"}, "ingredients": [{"name": "미니 모차렐라 (보콘치니)", "qty": "10~12개"}, {"name": "방울토마토", "qty": "10~12개"}, {"name": "바질 잎", "qty": "10~12장"}, {"name": "발사믹 글레이즈", "qty": "한 줄"}, {"name": "올리브 오일", "qty": "한 방울"}, {"name": "굵은소금·후추", "qty": "약간"}, {"note": "카프레제의 토치 버전. 모차렐라 표면만 토치로 살짝 익히 면 안의 신선함은 유지하면서 표면 카라멜화. 호텔 톤 한 단 계 위."}], "method": [{"text": "미니 모차렐라를 키친타올로 물기 제거.", "duration": "1분"}, {"text": "토마토는 반으로 자름. 바질 잎은 손으로 비벼 향을 깨움.", "duration": "1분"}, {"text": "디너플레이트에 모차렐라와 토마토를 평행 정렬. 5개씩 교대로.", "duration": "1분"}, {"text": "Soto 토치로 모차렐라 표면만 짧게. 한 개당 5~7초. 살짝 갈색.", "duration": "1분"}, {"text": "바질 잎을 위에 흩뿌림. 굵은소금 한 자밤 + 후추 한 번 갈음.", "duration": "30초"}, {"text": "발사믹 글레이즈를 지그재그로 한 줄. 올리브 오일 한 방울.", "duration": "30초"}], "plating": [{"label": "접시", "value": "보울보울 디너 27cm"}, {"label": "배치", "value": "모차렐라·토마토 교대로 평행"}, {"label": "위", "value": "바질 잎 흩뿌림"}, {"label": "마무리", "value": "발사믹 + 올리브 오일"}], "tastenote": "차가운 모차렐라 속 + 따뜻한 표면 + 토마토 단즙 + 바질 허브 + 발사믹의 새콤달콤이 한 입에. 관자 아부리의 카프레제 버전.", "hosttip": "모차렐라 토치는 표면만. 너무 오래 대면 안이 녹아 흘러내림. 5~7초가 정점 — 표 면 살짝 갈색이면 즉시 멈춤.", "pairing": ["모엣 미니 · 샴페인 정통", "화이트 와인 · 이탈리아 백포도주", "진토닉 (예정) · 허브 매칭"]}, "48": {"no": "48", "title_ko": "콜드브루 토닉", "title_en": "Cold Brew Tonic", "meta": {"난이도": "★ 매우 쉬움", "시간": "3분", "분량": "1~2잔", "조리": "비가열", "보관": "콜드브루 냉장"}, "ingredients": [{"name": "콜드브루 원액", "qty": "60mL (잔당)"}, {"name": "피버트리 토닉 200mL", "qty": "1병"}, {"name": "라임 슬라이스", "qty": "1조각"}, {"name": "얼음", "qty": "잔 가득"}, {"note": "여름 한정 카페바 카드. 콜드브루를 토닉과 레이어해서 만 드는 깔끔한 음료. 카페인 + 청량감."}], "method": [{"text": "Nachtmann 하이볼에 얼음을 70%까지.", "duration": "20초"}, {"text": "피버트리 토닉을 잔 가장자리로 천천히 따름. 잔의 60%까지.", "duration": "1분"}, {"text": "콜드브루 원액 60mL를 바스푼 뒷면을 따라 천천히 부음. 아래로 가라앉아 레이 어 형성.", "duration": "1분"}, {"text": "(저으지 말 것). 라임 슬라이스를 잔 가장자리에.", "duration": "20초"}], "plating": [{"label": "잔", "value": "Nachtmann 하이볼 (큰 사이즈)"}, {"label": "얼음", "value": "잔의 70%"}, {"label": "레이어", "value": "하단 콜드브루 + 상단 토닉"}, {"label": "가니시", "value": "라임 휠"}], "tastenote": "콜드브루의 진한 쓴맛 + 토닉의 쌉쌀한 단맛 + 라임의 산미가 한 잔에. 차 갑고 깔끔. 여름 카페바의 정점.", "hosttip": "토닉 먼저 → 콜드브루 나중. 콜드브루가 무거워서 자연스럽게 아래로 가라앉음. 잔 을 저으면 갈색으로 섞이지만 그건 손님이 직접 — 색이 변하는 걸 보는 게 재미.", "pairing": ["계절 과일 트레이 · 아침", "크래커 셀렉션 · 가벼움", "스모어 미니 · 단맛 매칭"]}, "49": {"no": "49", "title_ko": "아침 그릭 볼", "title_en": "Greek Yogurt Bowl", "meta": {"난이도": "★ 매우 쉬움", "시간": "5분", "분량": "1~2인", "조리": "비가열", "보관": "그릭요거트 냉장"}, "ingredients": [{"name": "그릭요거트 (덴마크 또는 Fage)", "qty": "200g"}, {"name": "설향 딸기", "qty": "3~4개"}, {"name": "청포도", "qty": "10~12알"}, {"name": "바나나 슬라이스", "qty": "5~6조각"}, {"name": "마카다미아 + 호두", "qty": "한 줌"}, {"name": "아카시아 꿀", "qty": "1~2 큰술"}, {"name": "스피아민트 잎", "qty": "약간 (선택)"}, {"note": "아침 모드의 정직한 답. 손님이 자고 일어났을 때, 가볍지 만 만족스러운 한 그릇. 호텔 어메니티의 정통."}], "method": [{"text": "그릭요거트를 보울에 200g 부음. 표면을 살짝 평탄화.", "duration": "1분"}, {"text": "과일을 씻고 키친타올로 물기 제거. 딸기는 꼭지 떼고 반 자름.", "duration": "1분"}, {"text": "그릭요거트 위에 과일 4종을 4구역으로 배치. 색깔 대비 살림.", "duration": "1분"}, {"text": "마카다미아·호두를 손으로 부숴 위에 한 줌 흩뿌림.", "duration": "30초"}, {"text": "아카시아 꿀을 위에 한 줄로 두름. 1~2큰술.", "duration": "20초"}, {"text": "(선택) 민트 잎 한 장을 위에. 비주얼.", "duration": "10초"}], "plating": [{"label": "그릇", "value": "보울보울 디저트 또는 큰 화이트 보울"}, {"label": "바닥", "value": "그릭요거트 200g"}, {"label": "위", "value": "과일 4종 정렬"}, {"label": "토핑", "value": "견과 + 꿀"}], "tastenote": "그릭요거트의 진한 산미 + 과일의 다양한 단맛 + 견과의 고소함 + 꿀의 부 드러운 단맛이 한 입에. 호텔 조식 메뉴의 정통.", "hosttip": "그릭요거트는 덴마크나 Fage 같은 진한 종류가 정통. 일반 떠먹는 요거트는 너무 묽음. 손님 알러지 한 번 확인.", "pairing": ["정성 라떼 · 아침 정석", "네스프레소 아메리카노 · 데일리", "레모네이드 스파클 · 비알콜"]}, "50": {"no": "50", "title_ko": "발베니 + 다크초콜릿 페어링", "title_en": "Balvenie & Dark Chocolate Pairing", "meta": {"난이도": "★ 매우 쉬움", "시간": "3분", "분량": "1~2인", "조리": "비가열", "보관": "상비"}, "ingredients": [{"name": "발베니 14년", "qty": "30mL (잔당)"}, {"name": "Lindt 90% 다크초콜릿", "qty": "3~4조각"}, {"name": "Lindt 85% 다크초콜릿", "qty": "2~3조각"}, {"name": "Glencairn 잔", "qty": "1~2개"}, {"name": "작은 우드 트레이", "qty": "1개"}, {"note": "마지막 카드. 50종 풀의 클라이맥스. 위스키와 다크초콜릿 의 정직한 듀오. 손님 응대의 정점."}], "method": [{"text": "작은 우드 보드를 준비. 잔과 초콜릿을 둘 자리 마련.", "duration": "20초"}, {"text": "Glencairn 잔에 발베니 14년 30mL씩 따름.", "duration": "30초"}, {"text": "Lindt 90% 3~4조각 + 85% 2~3조각을 보드 한 쪽에 정렬. 섞지 말 것.", "duration": "1분"}, {"text": "손님에게 순서 설명 — 위스키 한 모금 → 초콜릿 한 조각 → 다시 위스키.", "duration": ""}, {"text": "(선택) 산펠레그리노를 옆 작은 잔에 따로 — 입을 정리하는 체이서.", "duration": "20초"}], "plating": [{"label": "트레이", "value": "작은 우드 보드"}, {"label": "좌", "value": "Glencairn 잔 + 발베니"}, {"label": "우", "value": "초콜릿 4~6조각"}, {"label": "순서", "value": "위스키 → 초콜릿 → 위스키"}], "tastenote": "발베니의 바닐라·꿀 노트가 다크초콜릿의 쌉쌀함과 만나면서 카라멜 같은 느낌으로 변한다. 90%는 더 쌉쌀하게, 85%는 더 부드럽게 — 두 가지의 차이가 또렷이. 호스트 모드의 마무리 카드.", "hosttip": "이 페어링의 핵심은 순서. 위스키를 먼저 머금고, 입 안에 있을 때 초콜릿을 한 입 — 두 가지가 입 안에서 합쳐지면서 새로운 향이 만들어진다. 다시 위스키 한 모금 으로 마무리.", "pairing": ["Glenmorangie Signet · 다음 페어링", "카페 코레토 · 디저트 후", "아포가토 · 단맛 정리"]}};
+function openRecipe(num){const r=RECIPES[String(num)];if(!r)return;document.getElementById('modalNo').textContent='N O. '+r.no;document.getElementById('modalTitle').textContent=r.title_ko||r.title_en;const en=document.getElementById('modalTitleEn');en.textContent=r.title_en||'';en.style.display=r.title_en?'block':'none';const mc=document.getElementById('modalMeta');mc.innerHTML='';const ml=[['난이도','Level'],['시간','Time'],['분량','Serves'],['조리','Cook'],['보관','Storage']];let hm=false;ml.forEach(([k,e])=>{const v=r.meta[k];if(v){hm=true;const c=document.createElement('div');c.className='modal-meta-cell';c.innerHTML='<div class="label">'+e+'</div><div class="value">'+escapeHtml(v)+'</div>';mc.appendChild(c);}});mc.style.display=hm?'grid':'none';const il=document.getElementById('modalIngredients');il.innerHTML='';(r.ingredients||[]).forEach(ing=>{const li=document.createElement('li');if(ing.note){li.className='note';li.textContent='※ '+ing.note;}else{li.innerHTML='<span class="name">'+escapeHtml(ing.name)+'</span>'+(ing.qty?'<span class="qty">'+escapeHtml(ing.qty)+'</span>':'');}il.appendChild(li);});const md=document.getElementById('modalMethod');md.innerHTML='';(r.method||[]).forEach(m=>{const li=document.createElement('li');li.innerHTML=escapeHtml(m.text)+(m.duration?'<span class="duration">· '+escapeHtml(m.duration)+'</span>':'');md.appendChild(li);});const pe=document.getElementById('modalPlating');pe.innerHTML='';const pl=r.plating||[];if(pl.length===0)document.getElementById('platingSection').style.display='none';else{document.getElementById('platingSection').style.display='block';pl.forEach(p=>{const row=document.createElement('div');row.className='row';if(p.label)row.innerHTML='<div class="label-k">'+escapeHtml(p.label)+'</div><div>'+escapeHtml(p.value)+'</div>';else row.innerHTML='<div>'+escapeHtml(p.value)+'</div>';pe.appendChild(row);});}const he=document.getElementById('modalHostTip');if(r.hosttip){he.textContent=r.hosttip;document.getElementById('hostTipSection').style.display='block';}else document.getElementById('hostTipSection').style.display='none';const te=document.getElementById('modalTaste');if(r.tastenote){te.textContent=r.tastenote;document.getElementById('tasteSection').style.display='block';}else document.getElementById('tasteSection').style.display='none';const pre=document.getElementById('modalPairing');pre.innerHTML='';const prp=r.pairing||[];if(prp.length===0)document.getElementById('pairingSection').style.display='none';else{document.getElementById('pairingSection').style.display='block';prp.forEach(p=>{const li=document.createElement('li');li.textContent=p;pre.appendChild(li);});}const modal=document.getElementById('recipeModal');modal.classList.add('open');document.body.classList.add('modal-open');modal.scrollTop=0;setTimeout(()=>modal.querySelector('.modal-close').focus(),50);}
+function closeRecipe(){document.getElementById('recipeModal').classList.remove('open');document.body.classList.remove('modal-open');}
+function escapeHtml(s){if(s==null)return '';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.item[data-recipe]').forEach(item=>{
+    item.addEventListener('click',()=>openRecipe(item.getAttribute('data-recipe')));
+    item.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openRecipe(item.getAttribute('data-recipe'));}});
+  });
+  document.getElementById('recipeModal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeRecipe();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('recipeModal').classList.contains('open'))closeRecipe();});
+
+  // ===== Auto-open recipe from URL hash (#recipe-N) =====
+  function openFromHash(){
+    const h=window.location.hash;
+    const m=h&&h.match(/^#recipe-(\d+)$/);
+    if(m){
+      const num=m[1];
+      setTimeout(()=>openRecipe(num),150);
+    }
+  }
+  openFromHash();
+  window.addEventListener('hashchange',openFromHash);
+});
+</script>
+
+</body>
+</html>
