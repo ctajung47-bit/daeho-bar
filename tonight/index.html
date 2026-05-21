@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>오늘은 내가 너의 여친이얌 ♡</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.3.0/tabler-icons.min.css">
+<style>
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    margin: 0;
+    padding: 1.25rem 0.75rem;
+    font-family: Georgia, "Times New Roman", "Apple SD Gothic Neo", serif;
+    background: #D9CDB0;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(139, 111, 63, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(139, 111, 63, 0.08) 0%, transparent 40%);
+    min-height: 100vh;
+    color: #3D2818;
+  }
+  .book {
+    max-width: 440px;
+    margin: 0 auto;
+    background: #F4EDDD;
+    box-shadow:
+      0 8px 32px rgba(60, 40, 20, 0.22),
+      0 2px 6px rgba(60, 40, 20, 0.1),
+      inset 0 0 0 0.5px rgba(186, 117, 23, 0.2);
+    position: relative;
+    border-radius: 2px;
+  }
+  .book::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 0.5px solid rgba(186, 117, 23, 0.15);
+    pointer-events: none;
+    border-radius: 1px;
+    z-index: 2;
+  }
+  .book::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(139, 111, 63, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(139, 111, 63, 0.04) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  /* 표지 */
+  .cover {
+    padding: 3.5rem 1.75rem 3rem;
+    text-align: center;
+    border-bottom: 0.5px solid rgba(102, 71, 35, 0.2);
+    position: relative;
+  }
+  .cover .tag {
+    font-size: 10px;
+    color: #8B6F3F;
+    letter-spacing: 5px;
+    margin: 0 0 1.75rem;
+  }
+  .cover h1 {
+    font-size: 32px;
+    margin: 1rem 0 0;
+    color: #3D2818;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  .cover .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 1.5rem 0 1rem;
+  }
+  .cover .divider span {
+    width: 50px;
+    height: 0.5px;
+  }
+  .cover .divider .l { background: linear-gradient(90deg, transparent, #BA7517); }
+  .cover .divider .r { background: linear-gradient(90deg, #BA7517, transparent); }
+  .cover .divider i { font-size: 10px; color: #BA7517; }
+  .cover .dedication {
+    font-style: italic;
+    font-size: 12px;
+    color: #A88B5B;
+    margin: 0;
+  }
+
+  /* 메뉴 페이지 */
+  .menu-page {
+    padding: 2.75rem 1.75rem 2.75rem;
+    border-bottom: 0.5px solid rgba(102, 71, 35, 0.15);
+    position: relative;
+  }
+  .menu-page.signature {
+    background: linear-gradient(180deg, rgba(186, 117, 23, 0.05) 0%, rgba(244, 237, 221, 0) 100%);
+  }
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.75rem;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #8B6F3F;
+  }
+  .category.sig { color: #BA7517; font-weight: 500; }
+  .number { color: #A88B5B; }
+  .page-body { text-align: center; }
+  .illust {
+    width: 170px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.75rem;
+  }
+  .palace-title {
+    font-size: 26px;
+    font-weight: 400;
+    color: #3D2818;
+    margin: 0;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .sig-title { color: #5C3E1A; font-weight: 500; }
+  .palace-whisper {
+    font-style: italic;
+    font-size: 13.5px;
+    color: #8B6F3F;
+    margin: 12px 0 1.75rem;
+    letter-spacing: 0.3px;
+  }
+  .sig-whisper { color: #BA7517; }
+  .palace-btn {
+    background: transparent;
+    border: 0.5px solid #5C3E1A;
+    color: #3D2818;
+    padding: 10px 30px;
+    border-radius: 0;
+    font-size: 11px;
+    font-style: italic;
+    font-family: inherit;
+    cursor: pointer;
+    letter-spacing: 2.5px;
+    transition: all 0.2s;
+  }
+  .palace-btn:active { transform: scale(0.97); }
+  .palace-btn:hover { background: #3D2818; color: #F4EDDD; }
+  .sig-btn {
+    border-color: #BA7517;
+    color: #5C3E1A;
+    border-width: 1px;
+  }
+  .sig-btn:hover {
+    background: linear-gradient(135deg, #BA7517, #EF9F27);
+    color: #F4EDDD;
+    border-color: #EF9F27;
+  }
+
+  /* 푸터 */
+  .footer {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+  .footer p {
+    font-style: italic;
+    font-size: 11px;
+    color: #A88B5B;
+    margin: 0;
+    line-height: 1.8;
+  }
+
+  /* 결과 화면 */
+  #result { display: none; padding: 4rem 1.75rem; text-align: center; min-height: 80vh; }
+  #result.show { display: block; animation: fadeIn 0.5s ease-out; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .result-icon { color: #BA7517; font-size: 48px; margin-bottom: 1rem; }
+  .result-small { font-size: 10px; color: #8B6F3F; letter-spacing: 4px; margin: 0 0 8px; }
+  .result-title {
+    font-size: 28px;
+    color: #3D2818;
+    margin: 0;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .result-divider {
+    width: 40px;
+    height: 0.5px;
+    background: #BA7517;
+    margin: 1.5rem auto;
+  }
+  .preview {
+    background: rgba(255, 255, 255, 0.5);
+    border: 0.5px solid #BA7517;
+    border-radius: 4px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    text-align: left;
+    position: relative;
+  }
+  .preview::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 0.5px solid rgba(186, 117, 23, 0.3);
+    border-radius: 2px;
+    pointer-events: none;
+  }
+  .preview.error { border-color: #8B3D2F; }
+  .preview-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    color: #8B6F3F;
+    letter-spacing: 2px;
+  }
+  .preview-dot { width: 6px; height: 6px; background: #3D8B5C; border-radius: 50%; }
+  .preview.error .preview-dot { background: #8B3D2F; }
+  .preview-body {
+    font-size: 14px;
+    color: #3D2818;
+    margin: 0;
+    white-space: pre-line;
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .back-btn {
+    margin-top: 1rem;
+    padding: 9px 24px;
+    background: transparent;
+    border: 0.5px solid #8B6F3F;
+    color: #5C3E1A;
+    border-radius: 0;
+    font-size: 11px;
+    font-style: italic;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 2px;
+  }
+  .back-btn:hover { background: #5C3E1A; color: #F4EDDD; }
+  .spinner {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 1.5px solid rgba(186, 117, 23, 0.3);
+    border-top-color: #BA7517;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+  .pulse { animation: pulse 1.8s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<div class="book">
+
+  <div id="menu-screen">
+
+    <!-- 표지 -->
+    <div class="cover">
+      <p class="tag">— TONIGHT'S MENU · 오늘의 메뉴 —</p>
+
+      <svg viewBox="0 0 200 100" style="width: 130px; height: 65px; margin: 0 auto; display: block;">
+        <circle cx="70" cy="40" r="14" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+        <path d="M 56 60 Q 56 75 70 78 Q 84 75 84 60" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+        <circle cx="130" cy="40" r="14" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+        <path d="M 116 60 Q 116 75 130 78 Q 144 75 144 60" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+        <path d="M 100 48 L 96 44 Q 92 44 92 48 Q 92 52 100 58 Q 108 52 108 48 Q 108 44 104 44 Z" fill="#BA7517" stroke="#BA7517" stroke-width="0.5"/>
+      </svg>
+
+      <h1>오늘은 내가<br/>너의 여친이얌 ♡</h1>
+      <div class="divider"><span class="l"></span><i class="ti ti-heart"></i><span class="r"></span></div>
+      <p class="dedication">— 정대호 오빠에게 ♡ —</p>
+    </div>
+
+    <!-- NO. 1 -->
+    <div class="menu-page">
+      <div class="page-header">
+        <span class="category">초조함</span>
+        <span class="number">NO. 1</span>
+      </div>
+      <div class="page-body">
+        <svg viewBox="0 0 120 100" class="illust">
+          <circle cx="60" cy="32" r="12" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 50 28 Q 52 22 60 22 Q 68 22 70 28" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 52 44 L 50 70 L 70 70 L 68 44 Z" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 52 48 Q 38 52 36 62" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <circle cx="36" cy="64" r="5" fill="#F4EDDD" stroke="#BA7517" stroke-width="1"/>
+          <line x1="36" y1="64" x2="36" y2="61" stroke="#BA7517" stroke-width="0.6"/>
+          <line x1="36" y1="64" x2="39" y2="64" stroke="#BA7517" stroke-width="0.6"/>
+          <line x1="56" y1="70" x2="54" y2="88" stroke="#8B6F3F" stroke-width="0.8"/>
+          <line x1="64" y1="70" x2="66" y2="88" stroke="#8B6F3F" stroke-width="0.8"/>
+          <text x="80" y="30" font-family="serif" font-size="14" fill="#BA7517" font-style="italic">...</text>
+        </svg>
+        <h2 class="palace-title">도대체 언제 와?</h2>
+        <p class="palace-whisper">— 일단 나 묶어라</p>
+        <button class="palace-btn" data-n="1">제안하기 ♡</button>
+      </div>
+    </div>
+
+    <!-- NO. 2 SIGNATURE -->
+    <div class="menu-page signature">
+      <div class="page-header">
+        <span class="category sig">★ 시그니처</span>
+        <span class="number">NO. 2</span>
+      </div>
+      <div class="page-body">
+        <svg viewBox="0 0 120 100" class="illust">
+          <circle cx="60" cy="30" r="12" fill="none" stroke="#BA7517" stroke-width="1"/>
+          <path d="M 50 26 Q 52 18 60 18 Q 68 18 70 26" fill="none" stroke="#BA7517" stroke-width="1"/>
+          <path d="M 52 18 L 55 12 L 60 16 L 65 12 L 68 18" fill="none" stroke="#BA7517" stroke-width="1.2"/>
+          <circle cx="60" cy="14" r="1.5" fill="#BA7517"/>
+          <path d="M 52 42 L 50 68 L 70 68 L 68 42 Z" fill="none" stroke="#BA7517" stroke-width="1"/>
+          <path d="M 52 46 Q 42 38 36 22" fill="none" stroke="#BA7517" stroke-width="1"/>
+          <circle cx="36" cy="22" r="2.5" fill="none" stroke="#BA7517" stroke-width="1"/>
+          <path d="M 68 46 Q 78 50 76 60" fill="none" stroke="#BA7517" stroke-width="1"/>
+          <line x1="56" y1="68" x2="54" y2="86" stroke="#BA7517" stroke-width="1"/>
+          <line x1="64" y1="68" x2="66" y2="86" stroke="#BA7517" stroke-width="1"/>
+          <text x="22" y="18" font-family="serif" font-size="11" fill="#BA7517">✦</text>
+          <text x="92" y="44" font-family="serif" font-size="9" fill="#BA7517">✦</text>
+        </svg>
+        <h2 class="palace-title sig-title">정대호 소환 !!!!</h2>
+        <p class="palace-whisper sig-whisper">— 안 오면 차단이야 !!!</p>
+        <button class="palace-btn sig-btn" data-n="2">제안하기 ♡</button>
+      </div>
+    </div>
+
+    <!-- NO. 3 -->
+    <div class="menu-page">
+      <div class="page-header">
+        <span class="category">아쉬움</span>
+        <span class="number">NO. 3</span>
+      </div>
+      <div class="page-body">
+        <svg viewBox="0 0 140 100" class="illust">
+          <ellipse cx="70" cy="78" rx="50" ry="6" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <line x1="20" y1="78" x2="20" y2="92" stroke="#8B6F3F" stroke-width="0.8"/>
+          <line x1="120" y1="78" x2="120" y2="92" stroke="#8B6F3F" stroke-width="0.8"/>
+          <circle cx="32" cy="36" r="9" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 24 32 Q 26 26 32 26 Q 38 26 40 32" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 25 45 L 24 76 L 40 76 L 39 45 Z" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <circle cx="108" cy="36" r="9" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 100 32 Q 102 28 108 28 Q 114 28 116 32" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 101 45 L 100 76 L 116 76 L 115 45 Z" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 50 72 L 52 78 L 60 78 L 62 72 Z" fill="#F4EDDD" stroke="#BA7517" stroke-width="1"/>
+          <path d="M 80 72 L 82 78 L 90 78 L 92 72 Z" fill="#F4EDDD" stroke="#BA7517" stroke-width="1"/>
+          <path d="M 54 68 Q 56 64 54 60" fill="none" stroke="#BA7517" stroke-width="0.6"/>
+          <path d="M 58 68 Q 60 64 58 60" fill="none" stroke="#BA7517" stroke-width="0.6"/>
+          <path d="M 84 68 Q 86 64 84 60" fill="none" stroke="#BA7517" stroke-width="0.6"/>
+          <path d="M 88 68 Q 90 64 88 60" fill="none" stroke="#BA7517" stroke-width="0.6"/>
+          <path d="M 70 50 L 67 47 Q 64 47 64 50 Q 64 53 70 58 Q 76 53 76 50 Q 76 47 73 47 Z" fill="#BA7517"/>
+        </svg>
+        <h2 class="palace-title">30분만 더 있을래?</h2>
+        <p class="palace-whisper">아직 보내기 싫어서</p>
+        <button class="palace-btn" data-n="3">제안하기 ♡</button>
+      </div>
+    </div>
+
+    <!-- NO. 4 -->
+    <div class="menu-page">
+      <div class="page-header">
+        <span class="category">연장</span>
+        <span class="number">NO. 4</span>
+      </div>
+      <div class="page-body">
+        <svg viewBox="0 0 140 100" class="illust">
+          <path d="M 45 25 L 35 28 L 42 50 Q 50 56 58 50 L 65 28 L 55 25 Z" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <line x1="50" y1="56" x2="50" y2="78" stroke="#8B6F3F" stroke-width="0.8"/>
+          <ellipse cx="50" cy="80" rx="10" ry="2" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 39 35 L 42 50 Q 50 56 58 50 L 61 35 Z" fill="#BA7517" opacity="0.5"/>
+          <path d="M 75 25 L 85 28 L 78 50 Q 70 56 62 50 L 55 28 L 65 25 Z" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 95 25 L 85 28 L 92 50 Q 100 56 108 50 L 115 28 L 105 25 Z" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <line x1="100" y1="56" x2="100" y2="78" stroke="#8B6F3F" stroke-width="0.8"/>
+          <ellipse cx="100" cy="80" rx="10" ry="2" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 89 35 L 92 50 Q 100 56 108 50 L 111 35 Z" fill="#BA7517" opacity="0.5"/>
+          <text x="68" y="20" font-family="serif" font-size="14" fill="#BA7517" font-style="italic">✦</text>
+          <text x="80" y="14" font-family="serif" font-size="10" fill="#BA7517">✦</text>
+        </svg>
+        <h2 class="palace-title">1시간 더 있자</h2>
+        <p class="palace-whisper">시간이 너무 짧잖아</p>
+        <button class="palace-btn" data-n="4">제안하기 ♡</button>
+      </div>
+    </div>
+
+    <!-- NO. 5 -->
+    <div class="menu-page">
+      <div class="page-header">
+        <span class="category">미식</span>
+        <span class="number">NO. 5</span>
+      </div>
+      <div class="page-body">
+        <svg viewBox="0 0 140 100" class="illust">
+          <ellipse cx="70" cy="60" rx="38" ry="8" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 32 60 Q 32 80 70 82 Q 108 80 108 60" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <ellipse cx="70" cy="58" rx="34" ry="6" fill="#BA7517" opacity="0.3"/>
+          <circle cx="70" cy="54" r="6" fill="#EF9F27" opacity="0.7"/>
+          <circle cx="70" cy="54" r="6" fill="none" stroke="#BA7517" stroke-width="0.8"/>
+          <path d="M 50 50 Q 52 44 50 38" fill="none" stroke="#BA7517" stroke-width="0.6"/>
+          <path d="M 90 50 Q 92 44 90 38" fill="none" stroke="#BA7517" stroke-width="0.6"/>
+          <line x1="115" y1="32" x2="125" y2="58" stroke="#8B6F3F" stroke-width="1"/>
+          <line x1="120" y1="30" x2="128" y2="56" stroke="#8B6F3F" stroke-width="1"/>
+          <path d="M 30 25 L 27 22 Q 24 22 24 25 Q 24 28 30 33 Q 36 28 36 25 Q 36 22 33 22 Z" fill="#BA7517"/>
+        </svg>
+        <h2 class="palace-title">영천영화 가자</h2>
+        <p class="palace-whisper">육회비빔밥 어때? 내가 살게</p>
+        <button class="palace-btn" data-n="5">제안하기 ♡</button>
+      </div>
+    </div>
+
+    <!-- NO. 6 -->
+    <div class="menu-page">
+      <div class="page-header">
+        <span class="category">귀가</span>
+        <span class="number">NO. 6</span>
+      </div>
+      <div class="page-body">
+        <svg viewBox="0 0 140 100" class="illust">
+          <path d="M 25 60 L 30 45 L 50 42 L 90 42 L 110 45 L 115 60 L 115 72 L 25 72 Z" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <path d="M 35 58 L 38 47 L 70 45 L 70 58 Z" fill="#F4EDDD" stroke="#8B6F3F" stroke-width="0.6"/>
+          <path d="M 72 58 L 72 45 L 100 47 L 103 58 Z" fill="#F4EDDD" stroke="#8B6F3F" stroke-width="0.6"/>
+          <circle cx="45" cy="74" r="6" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <circle cx="45" cy="74" r="2" fill="#8B6F3F"/>
+          <circle cx="95" cy="74" r="6" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+          <circle cx="95" cy="74" r="2" fill="#8B6F3F"/>
+          <rect x="58" y="32" width="24" height="9" rx="1" fill="#BA7517"/>
+          <text x="70" y="39" font-family="serif" font-size="6" fill="#F4EDDD" text-anchor="middle" font-weight="500" letter-spacing="1">TAXI</text>
+          <circle cx="118" cy="22" r="6" fill="#EF9F27" opacity="0.5"/>
+          <circle cx="116" cy="20" r="5" fill="#F4EDDD"/>
+          <text x="20" y="20" font-family="serif" font-size="9" fill="#BA7517">✦</text>
+          <text x="32" y="14" font-family="serif" font-size="7" fill="#BA7517">✦</text>
+        </svg>
+        <h2 class="palace-title">택시비 주세요 ♡</h2>
+        <p class="palace-whisper">집에 잘 가게 해줘</p>
+        <button class="palace-btn" data-n="6">제안하기 ♡</button>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div class="footer">
+      <p>신중히 골라줘 ♡<br/>모든 제안은 오직 오빠만을 위한 것</p>
+    </div>
+
+  </div>
+
+  <div id="result"></div>
+
+</div>
+
+<script>
+  // ============================================
+  // 텔레그램 봇 설정 - 여기 두 줄만 수정하세요
+  // ============================================
+  const BOT_TOKEN = "7661001777:AAG491PxcCVNq8MOxje2kiQGKU9liKgtSSQ";
+  const CHAT_ID   = "5746958061";
+  // ============================================
+
+  const messages = {
+    1: "💋 너의 여친이 주문했어 ♡\n\n\"도대체 언제 오는 거야?\"\n— 일단 나 묶어라",
+    2: "💋✨ 너의 여친이 주문했어 ♡\n\n\"정대호 오빠 소환 !!!!\"\n— 이거 안 오면 차단이야 !!!",
+    3: "💋 너의 여친이 주문했어 ♡\n\n\"30분만 더 있을래?\"\n— 아직 보내기 싫대",
+    4: "💋 너의 여친이 주문했어 ♡\n\n\"1시간 더 있자\"\n— 시간이 너무 짧대",
+    5: "💋 너의 여친이 주문했어 ♡\n\n\"영천영화 가서 육회비빔밥 어때?\"\n— 배고프지 않냬, 자기가 산대",
+    6: "💋 너의 여친이 주문했어 ♡\n\n\"택시비 주세요\"\n— 집에 잘 보내달래"
+  };
+
+  const menuScreen = document.getElementById('menu-screen');
+  const resultScreen = document.getElementById('result');
+
+  document.querySelectorAll('.palace-btn').forEach(btn => {
+    btn.addEventListener('click', () => pick(parseInt(btn.dataset.n)));
+  });
+
+  async function pick(n) {
+    const isSpecial = n === 2;
+    menuScreen.style.display = 'none';
+    resultScreen.classList.add('show');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    resultScreen.innerHTML = `
+      <div class="result-icon"><span class="spinner"></span></div>
+      <p class="result-small">SENDING ♡</p>
+      <h2 class="result-title">마음 전달 중...</h2>
+    `;
+
+    try {
+      const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: CHAT_ID, text: messages[n] })
+      });
+
+      const data = await response.json();
+      if (!data.ok) throw new Error(data.description || '전송 실패');
+
+      resultScreen.innerHTML = `
+        <i class="ti ti-send result-icon ${isSpecial ? 'pulse' : ''}"></i>
+        <p class="result-small">SENT WITH ♡</p>
+        <h2 class="result-title">마음 전달 완료</h2>
+        <div class="result-divider"></div>
+        <div class="preview">
+          <div class="preview-header">
+            <div class="preview-dot"></div>
+            <span>TELEGRAM · 지금</span>
+          </div>
+          <p class="preview-body">${messages[n]}</p>
+        </div>
+        <p class="result-small" style="margin-top:1.5rem; letter-spacing:2px;">정대호 오빠 폰이 지금 울리고 있어 ♡</p>
+        <button class="back-btn" onclick="back()">← 다른 거 고를래</button>
+      `;
+    } catch (err) {
+      resultScreen.innerHTML = `
+        <i class="ti ti-mood-sad result-icon" style="color:#8B3D2F;"></i>
+        <p class="result-small" style="color:#8B3D2F;">OOPS</p>
+        <h2 class="result-title" style="color:#5C2418;">전송 실패</h2>
+        <div class="result-divider" style="background:#8B3D2F;"></div>
+        <div class="preview error">
+          <div class="preview-header">
+            <div class="preview-dot"></div>
+            <span>ERROR</span>
+          </div>
+          <p class="preview-body" style="font-size:12px;">${err.message}\n\n봇 토큰과 chat_id 확인해줘</p>
+        </div>
+        <button class="back-btn" onclick="back()">← 다시 시도</button>
+      `;
+    }
+  }
+
+  function back() {
+    menuScreen.style.display = 'block';
+    resultScreen.classList.remove('show');
+    resultScreen.innerHTML = '';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
