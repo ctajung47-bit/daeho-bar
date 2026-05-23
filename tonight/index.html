@@ -48,6 +48,117 @@
     pointer-events: none;
   }
 
+  /* 입장 화면 */
+  #entry-screen {
+    padding: 3rem 2rem 3rem;
+    text-align: center;
+    position: relative;
+  }
+  .entry-tag {
+    font-size: 10px;
+    color: #8B6F3F;
+    letter-spacing: 5px;
+    margin: 0 0 1.25rem;
+  }
+  .entry-title {
+    font-size: 32px;
+    margin: 0;
+    color: #3D2818;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.3px;
+  }
+  .entry-flower {
+    width: 55px;
+    height: 44px;
+    margin: 0 auto 1rem;
+    display: block;
+    opacity: 0.85;
+  }
+  .poem {
+    font-style: italic;
+    font-size: 11px;
+    color: #5C3E1A;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .poem p { margin: 0; }
+  .poem .poem-gap { margin-top: 0.5rem; }
+  .poem .poem-bloom {
+    color: #BA7517;
+    font-weight: 500;
+  }
+  .entry-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 1.75rem 0 1.25rem;
+  }
+  .entry-divider.top {
+    margin: 1.5rem 0;
+  }
+  .entry-divider.top span {
+    width: 50px !important;
+  }
+  .entry-divider span {
+    width: 30px;
+    height: 0.5px;
+  }
+  .entry-divider .l { background: linear-gradient(90deg, transparent, #BA7517); }
+  .entry-divider .r { background: linear-gradient(90deg, #BA7517, transparent); }
+  .entry-divider i { font-size: 12px; color: #BA7517; }
+  .entry-prompt {
+    font-size: 14px;
+    color: #3D2818;
+    margin: 0 0 0.75rem;
+    letter-spacing: 0.5px;
+  }
+  #name-input {
+    width: 100%;
+    padding: 9px 14px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #8B6F3F;
+    font-family: inherit;
+    font-size: 17px;
+    color: #3D2818;
+    text-align: center;
+    outline: none;
+    letter-spacing: 2px;
+  }
+  #name-input::placeholder {
+    color: #A88B5B;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  #enter-btn {
+    margin-top: 1.5rem;
+    padding: 11px 36px;
+    background: transparent;
+    border: 0.5px solid #5C3E1A;
+    color: #3D2818;
+    border-radius: 0;
+    font-size: 11px;
+    font-style: italic;
+    font-family: inherit;
+    cursor: pointer;
+    letter-spacing: 2.5px;
+    transition: all 0.2s;
+  }
+  #enter-btn:active { transform: scale(0.97); }
+  #enter-btn:hover { background: #3D2818; color: #F4EDDD; }
+  .entry-footer {
+    font-style: italic;
+    font-size: 10px;
+    color: #A88B5B;
+    margin: 1.5rem 0 0;
+    letter-spacing: 2px;
+  }
+
   /* 표지 */
   .cover {
     padding: 3.5rem 1.75rem 3rem;
@@ -260,7 +371,51 @@
 
 <div class="book">
 
-  <div id="menu-screen">
+  <!-- 입장 화면 -->
+  <div id="entry-screen">
+    <div class="entry-content">
+      <p class="entry-tag">— TONIGHT'S MENU · 오늘의 메뉴 —</p>
+
+      <h1 class="entry-title">오늘은 내가<br/>너의 여친이얌 ♡</h1>
+
+      <div class="entry-divider top">
+        <span class="l"></span>
+        <i class="ti ti-heart"></i>
+        <span class="r"></span>
+      </div>
+
+      <svg viewBox="0 0 100 80" class="entry-flower">
+        <path d="M 50 75 Q 48 60 50 45" fill="none" stroke="#8B6F3F" stroke-width="0.8"/>
+        <path d="M 50 60 Q 42 56 38 60 Q 42 64 50 62" fill="none" stroke="#8B6F3F" stroke-width="0.7"/>
+        <ellipse cx="50" cy="30" rx="6" ry="10" fill="none" stroke="#BA7517" stroke-width="0.8"/>
+        <ellipse cx="50" cy="30" rx="6" ry="10" fill="none" stroke="#BA7517" stroke-width="0.8" transform="rotate(72 50 35)"/>
+        <ellipse cx="50" cy="30" rx="6" ry="10" fill="none" stroke="#BA7517" stroke-width="0.8" transform="rotate(144 50 35)"/>
+        <ellipse cx="50" cy="30" rx="6" ry="10" fill="none" stroke="#BA7517" stroke-width="0.8" transform="rotate(216 50 35)"/>
+        <ellipse cx="50" cy="30" rx="6" ry="10" fill="none" stroke="#BA7517" stroke-width="0.8" transform="rotate(288 50 35)"/>
+        <circle cx="50" cy="35" r="3.5" fill="#BA7517"/>
+      </svg>
+
+      <div class="poem">
+        <p>내가 그의 이름을 불러주기 전에는</p>
+        <p>그는 다만 하나의 몸짓에 지나지 않았다.</p>
+        <p class="poem-gap">내가 그의 이름을 불러주었을 때,</p>
+        <p>그는 나에게로 와서 <span class="poem-bloom">꽃이 되었다.</span></p>
+      </div>
+
+      <div class="entry-divider">
+        <span class="l"></span>
+        <i class="ti ti-flower"></i>
+        <span class="r"></span>
+      </div>
+
+      <p class="entry-prompt">이름을</p>
+      <input type="text" id="name-input" placeholder="여기에 적어주세요" autocomplete="off" maxlength="20" />
+      <button id="enter-btn">입장하기 ♡</button>
+      <p class="entry-footer">— TONIGHT ONLY —</p>
+    </div>
+  </div>
+
+  <div id="menu-screen" style="display: none;">
 
     <!-- 표지 -->
     <div class="cover">
@@ -460,17 +615,47 @@
   const CHAT_ID   = "5746958061";
   // ============================================
 
-  const messages = {
-    1: "💋 너의 여친이 주문했어 ♡\n\n\"도대체 언제 오는 거야?\"\n— 일단 나 묶어라",
-    2: "💋✨ 너의 여친이 주문했어 ♡\n\n\"오빠 소환 !!!!\"\n— 이거 안 오면 차단이야 !!!",
-    3: "💋 너의 여친이 주문했어 ♡\n\n\"30분만 더 있을래?\"\n— 아직 보내기 싫대",
-    4: "💋 너의 여친이 주문했어 ♡\n\n\"1시간 더 있자\"\n— 시간이 너무 짧대",
-    5: "💋 너의 여친이 주문했어 ♡\n\n\"영천영화 가서 육회비빔밥 어때?\"\n— 배고프지 않냬, 자기가 산대",
-    6: "💋 너의 여친이 주문했어 ♡\n\n\"택시비 주세요\"\n— 집에 잘 보내달래"
-  };
+  let guestName = "";
 
+  function buildMessage(n) {
+    const name = guestName || "오늘의 손님";
+    const orders = {
+      1: { emoji: "🌸", title: "도대체 언제 오는 거야?", sub: "일단 나 묶어라" },
+      2: { emoji: "🌸✨", title: "오빠 소환 !!!!", sub: "이거 안 오면 차단이야 !!!" },
+      3: { emoji: "🌸", title: "30분만 더 있을래?", sub: "아직 보내기 싫대" },
+      4: { emoji: "🌸", title: "1시간 더 있자", sub: "시간이 너무 짧대" },
+      5: { emoji: "🌸", title: "영천영화 가서 육회비빔밥 어때?", sub: "배고프지 않냬, 자기가 산대" },
+      6: { emoji: "🌸", title: "택시비 주세요", sub: "집에 잘 보내달래" }
+    };
+    const o = orders[n];
+    return `${o.emoji} ${name} 님께서 주문하셨습니다 ♡\n\n"${o.title}"\n— ${o.sub}`;
+  }
+
+  const entryScreen = document.getElementById('entry-screen');
   const menuScreen = document.getElementById('menu-screen');
   const resultScreen = document.getElementById('result');
+  const nameInput = document.getElementById('name-input');
+  const enterBtn = document.getElementById('enter-btn');
+
+  // localStorage 사용 안함 - 매번 새로 입력 (claude.ai 제한 회피용)
+  // 입장 버튼 처리
+  function tryEnter() {
+    const name = nameInput.value.trim();
+    if (!name) {
+      nameInput.style.borderBottomColor = '#8B3D2F';
+      nameInput.placeholder = '이름을 적어주세요';
+      setTimeout(() => { nameInput.style.borderBottomColor = '#8B6F3F'; }, 1500);
+      return;
+    }
+    guestName = name;
+    entryScreen.style.display = 'none';
+    menuScreen.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  enterBtn.addEventListener('click', tryEnter);
+  nameInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') tryEnter();
+  });
 
   document.querySelectorAll('.palace-btn').forEach(btn => {
     btn.addEventListener('click', () => pick(parseInt(btn.dataset.n)));
@@ -492,7 +677,7 @@
       const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: CHAT_ID, text: messages[n] })
+        body: JSON.stringify({ chat_id: CHAT_ID, text: buildMessage(n) })
       });
 
       const data = await response.json();
@@ -508,9 +693,9 @@
             <div class="preview-dot"></div>
             <span>TELEGRAM · 지금</span>
           </div>
-          <p class="preview-body">${messages[n]}</p>
+          <p class="preview-body">${buildMessage(n)}</p>
         </div>
-        <p class="result-small" style="margin-top:1.5rem; letter-spacing:2px;">나의 오빠 폰이 지금 울리고 있어 ♡</p>
+        <p class="result-small" style="margin-top:1.5rem; letter-spacing:2px;">오빠 폰이 지금 울리고 있어 ♡</p>
         <button class="back-btn" onclick="back()">← 다른 거 고를래</button>
       `;
     } catch (err) {
